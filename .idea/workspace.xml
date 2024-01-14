@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 4.27 shell and batch scripts">
+    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 5.30 hosts and pages json">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/env/common.env" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/env/common.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/env/parseEnv.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/env/parseEnv.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/env/global.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/env/global.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-visibility.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-visibility.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/navigation.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/setup/world.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/setup/world.ts" afterDir="false" />
     </list>
@@ -244,7 +245,7 @@
       <option name="presentableId" value="Default" />
       <updated>1638155757223</updated>
       <workItem from="1699412249451" duration="22000" />
-      <workItem from="1705029937949" duration="20749000" />
+      <workItem from="1705029937949" duration="23933000" />
     </task>
     <task id="LOCAL-00001" summary="section 4.23">
       <option name="closed" value="true" />
@@ -278,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705218413248</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="section 5.30 hosts and pages json">
+      <option name="closed" value="true" />
+      <created>1705220649332</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705220649332</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -322,7 +331,8 @@
     <MESSAGE value="section 4.23" />
     <MESSAGE value="workspace file" />
     <MESSAGE value="section 4.27 shell and batch scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="section 4.27 shell and batch scripts" />
+    <MESSAGE value="section 5.30 hosts and pages json" />
+    <option name="LAST_COMMIT_MESSAGE" value="section 5.30 hosts and pages json" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
