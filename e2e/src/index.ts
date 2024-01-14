@@ -13,11 +13,7 @@ dotenv.config({ path: env('COMMON_CONFIG_FILE')});
 
 const hostsConfig: HostsConfig = getJsonFromFile(env('HOSTS_URLS_PATH'));
 
-console.log('hostsConfig', hostsConfig);
-
 const pagesConfig: PagesConfig = getJsonFromFile(env('PAGE_URLS_PATH'))
-
-console.log('pagesConfig', pagesConfig);
 
 const mappingFiles = fs.readdirSync(`${process.cwd()}${env('PAGE_ELEMENTS_PATH')}`);
 

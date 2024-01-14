@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 5.37 custom timeout">
+    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 6.39 check current path matches pageId">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/config/mappings/home.json" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/config/mappings/home.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/config/pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/config/pages.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/env/global.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/env/global.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/features/home-page.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/home-page.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-value.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-value.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-visibility.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-visibility.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/navigation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/setup/world.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/setup/world.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/src/support/navigation-behaviour.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/support/navigation-behaviour.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/support/web-element-helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/support/web-element-helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +252,7 @@
       <option name="presentableId" value="Default" />
       <updated>1638155757223</updated>
       <workItem from="1699412249451" duration="22000" />
-      <workItem from="1705029937949" duration="27008000" />
+      <workItem from="1705029937949" duration="30747000" />
     </task>
     <task id="LOCAL-00001" summary="section 4.23">
       <option name="closed" value="true" />
@@ -301,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705226077758</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="section 6.39 check current path matches pageId">
+      <option name="closed" value="true" />
+      <created>1705227490868</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1705227490868</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -348,7 +365,8 @@
     <MESSAGE value="section 5.30 hosts and pages json" />
     <MESSAGE value="section 5.34 element mappings" />
     <MESSAGE value="section 5.37 custom timeout" />
-    <option name="LAST_COMMIT_MESSAGE" value="section 5.37 custom timeout" />
+    <MESSAGE value="section 6.39 check current path matches pageId" />
+    <option name="LAST_COMMIT_MESSAGE" value="section 6.39 check current path matches pageId" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
