@@ -6,6 +6,10 @@ export const env = (key: string): string => {
     return value;
 }
 
+export const envNumber = (key: string): number => {
+    return Number(env(key));
+}
+
 export const getJsonFromFile = <T = Record<string, string>>(path: string): T => {
     return require(`${process.cwd()}${path}`);
 }
