@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="workspace file">
+    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 4.27 shell and batch scripts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/env/common.env" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/env/common.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/setup/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/setup/hooks.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/env/parseEnv.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/env/parseEnv.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/navigation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/setup/world.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/setup/world.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +144,7 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.cucumber:regression">
+  <component name="RunManager" selected="Shell Script.cucumber:dev">
     <configuration name="cucumber:dev" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -243,7 +244,7 @@
       <option name="presentableId" value="Default" />
       <updated>1638155757223</updated>
       <workItem from="1699412249451" duration="22000" />
-      <workItem from="1705029937949" duration="18357000" />
+      <workItem from="1705029937949" duration="20749000" />
     </task>
     <task id="LOCAL-00001" summary="section 4.23">
       <option name="closed" value="true" />
@@ -261,7 +262,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705209507943</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="section 4.27 shell and batch scripts">
+      <option name="closed" value="true" />
+      <created>1705218360652</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705218360652</updated>
+    </task>
+    <task id="LOCAL-00004" summary="section 4.27 shell and batch scripts">
+      <option name="closed" value="true" />
+      <created>1705218413248</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705218413248</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -304,7 +321,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="section 4.23" />
     <MESSAGE value="workspace file" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace file" />
+    <MESSAGE value="section 4.27 shell and batch scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="section 4.27 shell and batch scripts" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
