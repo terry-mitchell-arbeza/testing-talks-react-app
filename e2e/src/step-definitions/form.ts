@@ -1,11 +1,11 @@
-import {Then } from '@cucumber/cucumber'
+import {When } from '@cucumber/cucumber'
 import {waitFor} from "../support/wait-for-behaviour";
 import { getElementLocator} from "../support/web-element-helper";
 import {ScenarioWorld} from "./setup/world";
 import {ElementKey} from "../env/global";
 import {inputValue, selectValue} from "../support/html-behaviour";
 
-Then(
+When(
     /^I fill in the "([^"]*)" input with "([^"]*)"$/,
     async function(this: ScenarioWorld, elementKey: ElementKey, input: string) {
         const {
@@ -28,7 +28,7 @@ Then(
     }
 )
 
-Then(
+When(
     /^I select the "([^"]*)" option from the "([^"]*)"$/,
     async function(this: ScenarioWorld, option: string, elementKey: ElementKey) {
         const {
