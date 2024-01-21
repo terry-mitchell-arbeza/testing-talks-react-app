@@ -30,8 +30,14 @@ export const checkElement = async (
     page: Page,
     elementIdentifier: ElementLocator
 ): Promise<void> => {
-    await page.focus(elementIdentifier);
     await page.check(elementIdentifier);
+}
+
+export const uncheckElement = async (
+    page: Page,
+    elementIdentifier: ElementLocator
+): Promise<void> => {
+    await page.uncheck(elementIdentifier);
 }
 
 export const getValue = async (

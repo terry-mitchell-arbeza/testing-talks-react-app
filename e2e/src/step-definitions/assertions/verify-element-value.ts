@@ -8,8 +8,6 @@ import {getValue} from "../../support/html-behaviour";
 Then(
     /^the "([^"]*)" should (not )?contain the text "(.*)"$/,
     async function(this: ScenarioWorld, elementKey: ElementKey, negate: boolean, expectedElementText: string) {
-        console.log(`the ${elementKey} should ${negate?'not ':''}contain the text ${expectedElementText}`);
-
         const {
             screen: { page},
             globalConfig
@@ -28,8 +26,6 @@ Then(
 Then(
     /^the "([^"]*)" should (not )?equal the text "(.*)"$/,
     async function(this: ScenarioWorld, elementKey: ElementKey, negate: boolean, expectedElementText: string) {
-        console.log(`the ${elementKey} should ${negate?' not':''}contain the text ${expectedElementText}`);
-
         const {
             screen: { page},
             globalConfig
@@ -46,8 +42,6 @@ Then(
 );
 Then(/^the "([^"]*)" should (not )?contain the value "([^"]*)"$/,
     async function (this: ScenarioWorld, elementKey: ElementKey, negate: boolean, expectedElementValue: string) {
-        console.log(`the ${elementKey} should ${negate?' not':''}contain the value ${expectedElementValue}`);
-
         const {
             screen: { page},
             globalConfig
@@ -64,8 +58,6 @@ Then(/^the "([^"]*)" should (not )?contain the value "([^"]*)"$/,
 );
 Then(/^the "([^"]*)" should (not )?equal the value "([^"]*)"$/,
     async function (this: ScenarioWorld, elementKey: ElementKey, negate: boolean, expectedElementValue: string) {
-        console.log(`the ${elementKey} should ${negate?' not':''}equal the value ${expectedElementValue}`);
-
         const {
             screen: { page},
             globalConfig
@@ -81,8 +73,6 @@ Then(/^the "([^"]*)" should (not )?equal the value "([^"]*)"$/,
 });
 Then(/^the "([^"]*)" should (not )?be enabled$/,
     async function (this: ScenarioWorld, elementKey: ElementKey, negate: boolean) {
-        console.log(`the ${elementKey} should ${negate?' not':''}be enabled`);
-
         const {
             screen: { page},
             globalConfig

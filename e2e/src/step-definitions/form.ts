@@ -8,8 +8,6 @@ import {inputValue, selectValue} from "../support/html-behaviour";
 When(
     /^I fill in the "([^"]*)" input with "([^"]*)"$/,
     async function(this: ScenarioWorld, elementKey: ElementKey, input: string) {
-        console.log(`I fill in the ${elementKey} input with ${input}`);
-
         const {
             screen: { page },
             globalConfig
@@ -31,8 +29,6 @@ When(
 When(
     /^I select the "([^"]*)" option from the "([^"]*)"$/,
     async function(this: ScenarioWorld, option: string, elementKey: ElementKey) {
-        console.log(`I select the ${option} option from the ${elementKey}`);
-
         const {
             screen: { page },
             globalConfig

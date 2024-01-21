@@ -1,6 +1,7 @@
-import {Before, After, ITestCaseHookParameter, setDefaultTimeout} from "@cucumber/cucumber";
+import {After, Before, BeforeStep, ITestCaseHookParameter, setDefaultTimeout} from "@cucumber/cucumber";
+import {PickleStepType} from "@cucumber/messages"
 import {ScenarioWorld} from "./world";
-import { env, envNumber } from '../../env/parseEnv';
+import {env, envNumber} from '../../env/parseEnv';
 
 setDefaultTimeout(envNumber('SCRIPT_TIMEOUT'));
 
@@ -15,6 +16,19 @@ Before(async function(this: ScenarioWorld, scenario) {
 
     const ready = await this.init(contextOptions);
 });
+
+BeforeStep(async function(this: ScenarioWorld, scenario) {
+    const toGivenWhenThen = (context: PickleStepType | undefined): string | undefined => {
+        switch(context){
+            case PickleStepType.CONTEXT: return 'Given';
+            case PickleStepType.ACTION: return 'When';
+            case PickleStepType.OUTCOME: return 'Then';
+            default: return undefined;
+        }
+    }
+    const gwt = toGivenWhenThen(scenario.pickleStep.type);
+    console.log(`${gwt? `${gwt} `: ''}${scenario.pickleStep.text}`);
+})
 
 After(async function(this: ScenarioWorld, scenario: ITestCaseHookParameter) {
     const {

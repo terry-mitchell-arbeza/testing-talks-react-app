@@ -3,14 +3,12 @@ import {ScenarioWorld} from "./setup/world";
 import {ElementKey} from "../env/global";
 import {getElementLocator} from "../support/web-element-helper";
 import {waitFor} from "../support/wait-for-behaviour";
-import {checkElement, clickElement} from "../support/html-behaviour";
+import {checkElement, uncheckElement} from "../support/html-behaviour";
 
 
 When(
-    /^I check the "([^"]*)" radio button$/,
-    async function (this: ScenarioWorld, elementKey: ElementKey) {
-        console.log(`I check the ${elementKey} radio button`);
-
+    /^I (check|uncheck) the "([^"]*)" (?:check box|radio button)$/,
+    async function (this: ScenarioWorld, transition: string, elementKey: ElementKey) {
         const {
             screen: { page },
             globalConfig,
@@ -23,7 +21,11 @@ When(
                 state: 'visible',
             });
             if(result){
-                await checkElement(page, elementIdentifier);
+                 if(transition === 'check') {
+                     await checkElement(page, elementIdentifier);
+                 } else {
+                     await uncheckElement(page, elementIdentifier);
+                 }
             }
             return result;
         });
