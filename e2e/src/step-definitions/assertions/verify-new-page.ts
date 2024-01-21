@@ -6,7 +6,7 @@ import {getIframeElement} from "../../support/html-behaviour";
 import {waitFor} from "../../support/wait-for-behaviour";
 
 Then(
-    /^the "([0-9]+st|[0-9]+nd|[0-9]+rd|[0-9]+th)" (?:tab|window) should (not )?contain the title "(.*)"$/,
+    /^the "(\d+(?:st|nd|rd|th))" (?:tab|window) should (not )?contain the title "(.*)"$/,
     async function(this: ScenarioWorld, elementPosition: string, negate: boolean, expectedTitle: string) {
         const {
             screen: { page, context},
@@ -26,7 +26,7 @@ Then(
 )
 
 Then(
-    /^the "([^"]*)" on the "([0-9]+st|[0-9]+nd|[0-9]+rd|[0-9]+th)" (?:tab|window) should (not )?be displayed$/,
+    /^the "([^"]*)" on the "(\d+(?:st|nd|rd|th))" (?:tab|window) should (not )?be displayed$/,
     async function(this: ScenarioWorld, elementKey: ElementKey, elementPosition: string, negate: boolean) {
         const {
             screen: { page, context},

@@ -6,7 +6,7 @@ import {waitFor} from "../support/wait-for-behaviour";
 import {getIframeElement, inputValueOnPage} from "../support/html-behaviour";
 
 When(
-    /^I fill in the "([^"]*)" input on the "([0-9]+st|[0-9]+nd|[0-9]+rd|[0-9]+th)" (?:tab|window) with "([^"]*)"$/,
+    /^I fill in the "([^"]*)" input on the "(\d+(?:st|nd|rd|th))" (?:tab|window) with "([^"]*)"$/,
     async function(this: ScenarioWorld, elementKey: ElementKey, elementPosition: string, inputValue: string) {
         const {
             screen: { page, context },
@@ -31,7 +31,7 @@ When(
     }
 );
 
-Then(/^the "([^"]*)" on the "([0-9]+st|[0-9]+nd|[0-9]+rd|[0-9]+th)" (?:tab|window) should (not )?contain the text "([^"]*)"$/,
+Then(/^the "([^"]*)" on the "(\d+(?:st|nd|rd|th))" (?:tab|window) should (not )?contain the text "([^"]*)"$/,
     async function (this: ScenarioWorld, elementKey: ElementKey, elementPosition: string, negate: boolean, expectedElementText: string) {
         const {
             screen: { page, context},
@@ -49,7 +49,7 @@ Then(/^the "([^"]*)" on the "([0-9]+st|[0-9]+nd|[0-9]+rd|[0-9]+th)" (?:tab|windo
     }
 );
 
-Then(/^the "([^"]*)" on the "([0-9]+st|[0-9]+nd|[0-9]+rd|[0-9]+th)" (?:tab|window) should (not )?equal the text "([^"]*)"$/,
+Then(/^the "([^"]*)" on the "(\d+(?:st|nd|rd|th))" (?:tab|window) should (not )?equal the text "([^"]*)"$/,
     async function (this: ScenarioWorld, elementKey: ElementKey, elementPosition: string, negate: boolean, expectedElementText: string) {
         const {
             screen: { page, context},
