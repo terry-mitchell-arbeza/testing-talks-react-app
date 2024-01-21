@@ -9,12 +9,12 @@ import {checkElement, clickElement} from "../support/html-behaviour";
 When(
     /^I check the "([^"]*)" radio button$/,
     async function (this: ScenarioWorld, elementKey: ElementKey) {
+        console.log(`I check the ${elementKey} radio button`);
+
         const {
             screen: { page },
             globalConfig,
         } = this;
-
-        console.log(`I check the ${elementKey} radio button`);
 
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
 

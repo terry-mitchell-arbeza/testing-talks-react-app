@@ -10,12 +10,12 @@ import {ElementKey} from "../env/global";
 When(
     /^I click the "([^"]*)" (?:button|link|icon|element)$/,
     async function(this: ScenarioWorld, elementKey: ElementKey) {
+        console.log(`I click the ${elementKey} (?:button|link|icon|element)`);
+
         const {
             screen: { page },
             globalConfig,
         } = this;
-
-        console.log(`I click the ${elementKey} (?:button|link|icon|element)`);
 
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
 

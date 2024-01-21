@@ -7,11 +7,12 @@ import {waitFor} from "../../support/wait-for-behaviour";
 Given(
     /^the "([^"]*)" radio button should (not )?be checked$/,
     async function (this: ScenarioWorld, elementKey: ElementKey, negate: boolean) {
+        console.log(`the ${elementKey} radio button should ${negate?'not ':''}be checked`);
+
         const {
             screen: { page},
             globalConfig
         } = this;
-        console.log(`the ${elementKey} radio button should ${negate?'not ':''}be checked`);
 
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
 

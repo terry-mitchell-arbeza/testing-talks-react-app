@@ -7,12 +7,12 @@ import { waitFor} from "../../support/wait-for-behaviour";
 Then(
     /^the "([^"]*)" should (not )?be displayed$/,
     async function(this: ScenarioWorld, elementKey: ElementKey, negate: boolean) {
+        console.log(`the ${elementKey} should ${negate?'not ':''}be displayed`);
+
         const {
             screen: { page},
             globalConfig
         } = this;
-
-        console.log(`the ${elementKey} should ${negate?'not ':''}be displayed`);
 
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
 

@@ -9,12 +9,12 @@ import {waitFor} from "../support/wait-for-behaviour";
 Given(
     /^I am on the "([^"]*)" page$/,
     async function(this: ScenarioWorld, pageId: PageId) {
+        console.log(`I am on the ${pageId} page`);
+
         const {
             screen: { page},
             globalConfig
         } = this;
-
-        console.log(`I am on the ${pageId} page`);
 
         await navigateToPage(page, pageId, globalConfig);
 

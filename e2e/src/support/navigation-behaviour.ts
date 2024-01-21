@@ -11,13 +11,9 @@ export const navigateToPage = async (
     } = process.env;
 
     const hostPath = hostsConfig[`${hostName}`];
-
     const url = new URL(hostPath);
-
     const pagesConfigItem = pagesConfig[pageId];
-
     url.pathname = pagesConfigItem.route;
-
     await page.goto(url.href);
 }
 
@@ -47,11 +43,8 @@ export const getCurrentPageId = (
     globalConfig: GlobalConfig
 ): PageId => {
     const { pagesConfig } = globalConfig;
-
     const pageConfigPageIds = Object.keys(pagesConfig);
-
     const { pathname: currentPath} = new URL(page.url());
-
     const currentPageId = pageConfigPageIds.find(
         pageId => pathMatchesPageId(currentPath, pageId, globalConfig)
     );
