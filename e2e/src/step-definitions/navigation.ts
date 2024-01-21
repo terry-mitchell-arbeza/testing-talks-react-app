@@ -7,7 +7,7 @@ import {ScenarioWorld} from "./setup/world";
 import {waitFor} from "../support/wait-for-behaviour";
 
 Given(
-    /^I am on the "([^"]*)" page$/,
+    /^I navigate to the "([^"]*)" page$/,
     async function(this: ScenarioWorld, pageId: PageId) {
         console.log(`I am on the ${pageId} page`);
 

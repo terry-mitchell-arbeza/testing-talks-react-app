@@ -3,7 +3,8 @@ Feature: As a user I expect to be able to create contacts
   @smoke
   @regression
   Scenario: As a user I expect to be able to create a new contact
-    Given I am on the "home" page
+    Given I navigate to the "home" page
+    And I am directed to the "home" page
     And I click the "create" button
     Then I am directed to the "create contact" page
     And the "create contact header" should contain the text "Create Contact"
