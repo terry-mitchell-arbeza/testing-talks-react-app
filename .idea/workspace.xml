@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 9.74 iframes, tabs, windows">
+    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment=" section 10.79 - click and verify at index">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/config/mappings/playground.json" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/config/mappings/playground.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/features/playground/windows.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/playground/windows.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-value.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-value.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/features/playground/buttons.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/playground/buttons.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-new-page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-new-page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/click.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/click.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/support/html-behaviour.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/support/html-behaviour.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +252,7 @@
       <option name="presentableId" value="Default" />
       <updated>1638155757223</updated>
       <workItem from="1699412249451" duration="22000" />
-      <workItem from="1705029937949" duration="68521000" />
+      <workItem from="1705029937949" duration="70939000" />
     </task>
     <task id="LOCAL-00001" summary="section 4.23">
       <option name="closed" value="true" />
@@ -378,7 +374,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705832882744</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary=" section 10.79 - click and verify at index">
+      <option name="closed" value="true" />
+      <created>1705838045225</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1705838045225</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -433,7 +437,8 @@
     <MESSAGE value="section 8.62 autocompletes, parallel execution, retries" />
     <MESSAGE value="section 9.66 checkboxes, auto step logging" />
     <MESSAGE value="section 9.74 iframes, tabs, windows" />
-    <option name="LAST_COMMIT_MESSAGE" value="section 9.74 iframes, tabs, windows" />
+    <MESSAGE value=" section 10.79 - click and verify at index" />
+    <option name="LAST_COMMIT_MESSAGE" value=" section 10.79 - click and verify at index" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -2,7 +2,6 @@ import {Then} from "@cucumber/cucumber";
 import {getElementLocator} from "../../support/web-element-helper";
 import {ScenarioWorld} from "../setup/world";
 import {ElementKey} from "../../env/global";
-import {getIframeElement} from "../../support/html-behaviour";
 import {waitFor} from "../../support/wait-for-behaviour";
 
 Then(
