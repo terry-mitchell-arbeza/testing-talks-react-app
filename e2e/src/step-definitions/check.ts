@@ -7,7 +7,7 @@ import {checkElement, uncheckElement} from "../support/html-behaviour";
 
 
 When(
-    /^I (check|uncheck) the "([^"]*)" (?:check box|radio button)$/,
+    /^I (check|uncheck) the "([^"]*)" (?:check box|radio button|switch)$/,
     async function (this: ScenarioWorld, transition: string, elementKey: ElementKey) {
         const {
             screen: { page },
