@@ -28,7 +28,7 @@ When(
         });
     }
 )
-When(/^I click the "(\d+(?:st|nd|rd|th))" "([^"]*)" (?:button|link|icon|element)$/,
+When(/^I click the "\d*(1[123]th|1st|2nd|3rd|[04-9]th)" "([^"]*)" (?:button|link|icon|element)$/,
     async function (this: ScenarioWorld, elementPosition: string, elementKey: ElementKey) {
         const {
             screen: { page },
