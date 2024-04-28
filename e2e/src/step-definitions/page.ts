@@ -31,7 +31,7 @@ When(
     }
 );
 
-Then(/^the "([^"]*)" on the "\d*(1[123]th|1st|2nd|3rd|[04-9]th)" (?:tab|window) should (not )?contain the text "([^"]*)"$/,
+Then(/^the "([^"]*)" on the "((?<!\d)(?:1st|2nd|3rd)|\d*(?:1[123]th|[02-9](?:1st|2nd|3rd)|[04-9]th))" (?:tab|window) should (not )?contain the text "([^"]*)"$/,
     async function (this: ScenarioWorld, elementKey: ElementKey, elementPosition: string, negate: boolean, expectedElementText: string) {
         const {
             screen: { page, context},
@@ -49,7 +49,7 @@ Then(/^the "([^"]*)" on the "\d*(1[123]th|1st|2nd|3rd|[04-9]th)" (?:tab|window) 
     }
 );
 
-Then(/^the "([^"]*)" on the "\d*(1[123]th|1st|2nd|3rd|[04-9]th)" (?:tab|window) should (not )?equal the text "([^"]*)"$/,
+Then(/^the "([^"]*)" on the "((?<!\d)(?:1st|2nd|3rd)|\d*(?:1[123]th|[02-9](?:1st|2nd|3rd)|[04-9]th))" (?:tab|window) should (not )?equal the text "([^"]*)"$/,
     async function (this: ScenarioWorld, elementKey: ElementKey, elementPosition: string, negate: boolean, expectedElementText: string) {
         const {
             screen: { page, context},

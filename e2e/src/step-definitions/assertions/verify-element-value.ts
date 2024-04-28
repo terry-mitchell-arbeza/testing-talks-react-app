@@ -87,7 +87,7 @@ Then(/^the "([^"]*)" should (not )?be enabled$/,
         });
     }
 );
-Then(/^the "\d*(1[123]th|1st|2nd|3rd|[04-9]th)" "([^"]*)" should (not )?contain the text "([^"]*)"$/,
+Then(/^the "((?<!\d)(?:1st|2nd|3rd)|\d*(?:1[123]th|[02-9](?:1st|2nd|3rd)|[04-9]th))" "([^"]*)" should (not )?contain the text "([^"]*)"$/,
     async function (this: ScenarioWorld, elementPosition: string, elementKey: ElementKey, negate: boolean, expectedElementText: string) {
         const {
             screen: { page},
