@@ -56,3 +56,7 @@ export const getCurrentPageId = (
 
     return currentPageId;
 }
+
+export const reloadPage = async (page: Page): Promise<void> => {
+    await page.reload();
+}

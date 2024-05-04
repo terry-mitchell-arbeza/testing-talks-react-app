@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 11.93 - text areas, stored values">
+    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 12.96 - cards, avatars, improves position regex">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/config/mappings/playground.json" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/config/mappings/playground.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/features/playground/stored-values.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/playground/stored-values.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-value.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-value.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-visibility.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-visibility.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-new-page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-new-page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/click.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/click.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/features/create-contact.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/create-contact.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/features/home-page.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/home-page.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/navigation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/support/navigation-behaviour.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/support/navigation-behaviour.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,32 +107,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Shell Script.cucumber:dev.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.cucumber:regression.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.cucumber:smoke.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/src/step-definitions/assertions&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.cucumber.cucumber_node_package_dir&quot;: &quot;/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/node_modules/@cucumber/cucumber&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;npm.cucumber.executor&quot;: &quot;Run&quot;,
-    &quot;npm.cucumber:dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.cucumber:regression.executor&quot;: &quot;Run&quot;,
-    &quot;npm.cucumber:smoke.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Cucumber.js.Scenario: As a user I can interact an....executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Shell Script.cucumber:dev.executor": "Run",
+    "Shell Script.cucumber:regression.executor": "Run",
+    "Shell Script.cucumber:smoke.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/src/step-definitions/assertions",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.cucumber.cucumber_node_package_dir": "/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/node_modules/@cucumber/cucumber",
+    "nodejs_package_manager_path": "yarn",
+    "npm.cucumber.executor": "Run",
+    "npm.cucumber:dev.executor": "Run",
+    "npm.cucumber:regression.executor": "Run",
+    "npm.cucumber:smoke.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/e2e/src/step-definitions/assertions" />
@@ -150,7 +149,7 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.cucumber:dev">
+  <component name="RunManager" selected="npm.cucumber:regression">
     <configuration name="cucumber:dev" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -196,6 +195,13 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="Scenario: As a user I can interact an..." type="cucumber.js" factoryName="Cucumber.js" temporary="true">
+      <option name="myFilePath" value="$PROJECT_DIR$/e2e/src/features/playground/text-areas.feature" />
+      <option name="myNameFilter" value="^As a user I can interact and assert on text areas$" />
+      <option name="cucumberJsArguments" value="" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/e2e" />
+      <method v="2" />
+    </configuration>
     <configuration name="cucumber:dev" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/e2e/package.json" />
       <command value="run" />
@@ -236,6 +242,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Cucumber.js.Scenario: As a user I can interact an..." />
       <item itemvalue="npm.cucumber:dev" />
       <item itemvalue="npm.cucumber:smoke" />
       <item itemvalue="npm.cucumber:regression" />
@@ -243,6 +250,11 @@
       <item itemvalue="Shell Script.cucumber:smoke" />
       <item itemvalue="Shell Script.cucumber:regression" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cucumber.js.Scenario: As a user I can interact an..." />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -257,7 +269,8 @@
       <updated>1638155757223</updated>
       <workItem from="1699412249451" duration="22000" />
       <workItem from="1705029937949" duration="79032000" />
-      <workItem from="1711697776136" duration="8537000" />
+      <workItem from="1711697776136" duration="12391000" />
+      <workItem from="1714819591408" duration="3296000" />
     </task>
     <task id="LOCAL-00001" summary="section 4.23">
       <option name="closed" value="true" />
@@ -427,7 +440,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714218949807</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="section 12.96 - cards, avatars, improves position regex">
+      <option name="closed" value="true" />
+      <created>1714301655716</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1714301655716</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -488,7 +509,38 @@
     <MESSAGE value="improve position regexes" />
     <MESSAGE value="section 11.88 - browser alerts, page alerts, tooltips" />
     <MESSAGE value="section 11.93 - text areas, stored values" />
-    <option name="LAST_COMMIT_MESSAGE" value="section 11.93 - text areas, stored values" />
+    <MESSAGE value="section 12.96 - cards, avatars, improves position regex" />
+    <option name="LAST_COMMIT_MESSAGE" value="section 12.96 - cards, avatars, improves position regex" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-value.ts</url>
+          <line>54</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/e2e/src/step-definitions/form.ts</url>
+          <line>18</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-value.ts</url>
+          <line>37</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-value.ts</url>
+          <line>69</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
