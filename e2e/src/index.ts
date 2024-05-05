@@ -9,11 +9,16 @@ import {
 } from "./env/global";
 import fs from "fs";
 
+const environment = env('NODE_ENV');
+
 dotenv.config({ path: env('COMMON_CONFIG_FILE')});
+
+console.log('Environment', `${env('ENV_PATH')}${environment}.env`)
+dotenv.config({path: `${env('ENV_PATH')}${environment}.env`})
 
 const hostsConfig: HostsConfig = getJsonFromFile(env('HOSTS_URLS_PATH'));
 
-const pagesConfig: PagesConfig = getJsonFromFile(env('PAGE_URLS_PATH'))
+const pagesConfig: PagesConfig = getJsonFromFile(env('PAGE_URLS_PATH'));
 
 const mappingFiles = fs.readdirSync(`${process.cwd()}${env('PAGE_ELEMENTS_PATH')}`);
 

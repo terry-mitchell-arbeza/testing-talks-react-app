@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 12.96 - cards, avatars, improves position regex">
+    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 12.101 - drop down, select boxes, refreshing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/config/mappings/playground.json" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/config/mappings/playground.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/features/create-contact.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/create-contact.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/features/home-page.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/home-page.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/navigation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/support/navigation-behaviour.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/support/navigation-behaviour.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/config/hosts.json" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/config/hosts.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/env/common.env" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/env/common.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/run_tests.bat" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/run_tests.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/run_tests.sh" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/run_tests.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/features/playground/page-refresh.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/playground/page-refresh.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +131,7 @@
     "npm.cucumber:dev.executor": "Run",
     "npm.cucumber:regression.executor": "Run",
     "npm.cucumber:smoke.executor": "Run",
+    "npm.cuke:production:dev.executor": "Run",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "ts.external.directory.path": "/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
@@ -149,12 +152,12 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.cucumber:regression">
+  <component name="RunManager" selected="npm.cuke:production:dev">
     <configuration name="cucumber:dev" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
       <option name="SCRIPT_PATH" value="$PROJECT_DIR$/e2e/run_tests.sh" />
-      <option name="SCRIPT_OPTIONS" value="dev" />
+      <option name="SCRIPT_OPTIONS" value="localhost dev" />
       <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
       <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/e2e/" />
       <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
@@ -169,7 +172,7 @@
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
       <option name="SCRIPT_PATH" value="$PROJECT_DIR$/e2e/run_tests.sh" />
-      <option name="SCRIPT_OPTIONS" value="regression" />
+      <option name="SCRIPT_OPTIONS" value="localhost regression" />
       <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
       <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/e2e/" />
       <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
@@ -184,7 +187,7 @@
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
       <option name="SCRIPT_PATH" value="$PROJECT_DIR$/e2e/run_tests.sh" />
-      <option name="SCRIPT_OPTIONS" value="smoke" />
+      <option name="SCRIPT_OPTIONS" value="localhost smoke" />
       <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
       <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/e2e/" />
       <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
@@ -202,11 +205,11 @@
       <option name="workingDirectory" value="$PROJECT_DIR$/e2e" />
       <method v="2" />
     </configuration>
-    <configuration name="cucumber:dev" type="js.build_tools.npm">
+    <configuration name="cuke:localhost:dev" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/e2e/package.json" />
       <command value="run" />
       <scripts>
-        <script value="cucumber" />
+        <script value="cucumber:localhost" />
       </scripts>
       <arguments value="--profile dev" />
       <node-interpreter value="project" />
@@ -215,11 +218,11 @@
       </envs>
       <method v="2" />
     </configuration>
-    <configuration name="cucumber:regression" type="js.build_tools.npm">
+    <configuration name="cuke:localhost:regression" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/e2e/package.json" />
       <command value="run" />
       <scripts>
-        <script value="cucumber" />
+        <script value="cucumber:localhost" />
       </scripts>
       <arguments value="--profile regression" />
       <node-interpreter value="project" />
@@ -228,11 +231,50 @@
       </envs>
       <method v="2" />
     </configuration>
-    <configuration name="cucumber:smoke" type="js.build_tools.npm">
+    <configuration name="cuke:localhost:smoke" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/e2e/package.json" />
       <command value="run" />
       <scripts>
-        <script value="cucumber" />
+        <script value="cucumber:localhost" />
+      </scripts>
+      <arguments value="--profile smoke" />
+      <node-interpreter value="project" />
+      <envs>
+        <env name="COMMON_CONFIG_FILE" value="env/common.env" />
+      </envs>
+      <method v="2" />
+    </configuration>
+    <configuration name="cuke:production:dev" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/e2e/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="cucumber:production" />
+      </scripts>
+      <arguments value="--profile dev" />
+      <node-interpreter value="project" />
+      <envs>
+        <env name="COMMON_CONFIG_FILE" value="env/common.env" />
+      </envs>
+      <method v="2" />
+    </configuration>
+    <configuration name="cuke:production:regression" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/e2e/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="cucumber:production" />
+      </scripts>
+      <arguments value="--profile regression" />
+      <node-interpreter value="project" />
+      <envs>
+        <env name="COMMON_CONFIG_FILE" value="env/common.env" />
+      </envs>
+      <method v="2" />
+    </configuration>
+    <configuration name="cuke:production:smoke" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/e2e/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="cucumber:production" />
       </scripts>
       <arguments value="--profile smoke" />
       <node-interpreter value="project" />
@@ -243,9 +285,12 @@
     </configuration>
     <list>
       <item itemvalue="Cucumber.js.Scenario: As a user I can interact an..." />
-      <item itemvalue="npm.cucumber:dev" />
-      <item itemvalue="npm.cucumber:smoke" />
-      <item itemvalue="npm.cucumber:regression" />
+      <item itemvalue="npm.cuke:production:dev" />
+      <item itemvalue="npm.cuke:production:smoke" />
+      <item itemvalue="npm.cuke:production:regression" />
+      <item itemvalue="npm.cuke:localhost:dev" />
+      <item itemvalue="npm.cuke:localhost:smoke" />
+      <item itemvalue="npm.cuke:localhost:regression" />
       <item itemvalue="Shell Script.cucumber:dev" />
       <item itemvalue="Shell Script.cucumber:smoke" />
       <item itemvalue="Shell Script.cucumber:regression" />
@@ -270,7 +315,7 @@
       <workItem from="1699412249451" duration="22000" />
       <workItem from="1705029937949" duration="79032000" />
       <workItem from="1711697776136" duration="12391000" />
-      <workItem from="1714819591408" duration="3296000" />
+      <workItem from="1714819591408" duration="6700000" />
     </task>
     <task id="LOCAL-00001" summary="section 4.23">
       <option name="closed" value="true" />
@@ -448,7 +493,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714301655716</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="section 12.101 - drop down, select boxes, refreshing">
+      <option name="closed" value="true" />
+      <created>1714823188515</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1714823188515</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -510,7 +563,8 @@
     <MESSAGE value="section 11.88 - browser alerts, page alerts, tooltips" />
     <MESSAGE value="section 11.93 - text areas, stored values" />
     <MESSAGE value="section 12.96 - cards, avatars, improves position regex" />
-    <option name="LAST_COMMIT_MESSAGE" value="section 12.96 - cards, avatars, improves position regex" />
+    <MESSAGE value="section 12.101 - drop down, select boxes, refreshing" />
+    <option name="LAST_COMMIT_MESSAGE" value="section 12.101 - drop down, select boxes, refreshing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
