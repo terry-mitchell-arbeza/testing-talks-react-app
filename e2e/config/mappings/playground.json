@@ -51,5 +51,7 @@
   "drop down my account": "[data-id='drop-down-my-account']",
   "drop down logout": "[data-id='drop-down-logout']",
   "age": "[name='age']",
-  "email": "[data-id='email']"
+  "email": "[data-id='email']",
+  "password": "[data-id='password']",
+  "login": "[data-id='login-button']"
 }
