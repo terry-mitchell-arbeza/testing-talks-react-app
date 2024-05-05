@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 12.101 - drop down, select boxes, refreshing">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/config/hosts.json" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/config/hosts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/env/common.env" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/env/common.env" afterDir="false" />
+    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 13.104 - multiple environments">
       <change beforePath="$PROJECT_DIR$/e2e/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/run_tests.bat" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/run_tests.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/run_tests.sh" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/run_tests.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/features/playground/page-refresh.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/playground/page-refresh.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +309,7 @@
       <workItem from="1699412249451" duration="22000" />
       <workItem from="1705029937949" duration="79032000" />
       <workItem from="1711697776136" duration="12391000" />
-      <workItem from="1714819591408" duration="6700000" />
+      <workItem from="1714819591408" duration="6998000" />
     </task>
     <task id="LOCAL-00001" summary="section 4.23">
       <option name="closed" value="true" />
@@ -501,7 +495,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714823188515</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="section 13.104 - multiple environments">
+      <option name="closed" value="true" />
+      <created>1714886970370</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1714886970370</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -564,7 +566,8 @@
     <MESSAGE value="section 11.93 - text areas, stored values" />
     <MESSAGE value="section 12.96 - cards, avatars, improves position regex" />
     <MESSAGE value="section 12.101 - drop down, select boxes, refreshing" />
-    <option name="LAST_COMMIT_MESSAGE" value="section 12.101 - drop down, select boxes, refreshing" />
+    <MESSAGE value="section 13.104 - multiple environments" />
+    <option name="LAST_COMMIT_MESSAGE" value="section 13.104 - multiple environments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
