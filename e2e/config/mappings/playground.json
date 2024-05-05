@@ -4,7 +4,8 @@
   "female label": "[data-id='female-radio-button']",
   "male label": "[data-id='male-radio-button']",
   "movies": "[id='movies-input']",
-  "The Godfather": "//li[text()='The Godfather']",
+  "the godfather": "//li[text()='The Godfather']",
+  "the dark knight": "//li[text()='The Dark Knight']",
   "outlined required": "[id='outlined-required']",
   "outlined disabled": "[id='outlined-disabled']",
   "outlined read only": "[id='outlined-read-only-input']",
@@ -53,5 +54,6 @@
   "age": "[name='age']",
   "email": "[data-id='email']",
   "password": "[data-id='password']",
-  "login": "[data-id='login-button']"
+  "login": "[data-id='login-button']",
+  "email error": "[data-id='email-error']"
 }

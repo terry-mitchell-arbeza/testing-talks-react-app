@@ -8,6 +8,7 @@ import {
 
 } from "./env/global";
 import fs from "fs";
+import {generateCucumberRuntimeTag} from "./support/tag-helper";
 
 const environment = env('NODE_ENV');
 
@@ -23,6 +24,14 @@ const pagesConfig: PagesConfig = getJsonFromFile(env('PAGE_URLS_PATH'));
 const emailsConfig: EmailsConfig = getJsonFromFile(env('EMAILS_URL_PATH'));
 
 const mappingFiles = fs.readdirSync(`${process.cwd()}${env('PAGE_ELEMENTS_PATH')}`);
+
+const getEnvList = (): string[] => {
+    const envList = Object.keys(hostsConfig);
+    if(envList.length === 0) {
+        throw Error(`🧨 No environments mapped in ${env('HOSTS_URLS_PATH')}`)
+    }
+    return envList;
+}
 
 const pageElementMappings: PageElementMappings = mappingFiles.reduce(
     (pageElementConfigAcc, file) => {
@@ -49,8 +58,9 @@ const common = `./src/features/**/*.feature \
                         --parallel ${env('PARALLEL')} \
                         --retry ${env('RETRY')}`;
 
-const dev = `${common} --tags '@dev'`;
-const smoke = `${common} --tags '@smoke'`;
-const regression = `${common} --tags '@regression'`;
+//const dev = `${common} --tags '@dev'`;
+const dev = generateCucumberRuntimeTag(common, environment, getEnvList(), 'dev');
+const smoke = generateCucumberRuntimeTag(common, environment, getEnvList(), 'smoke');
+const regression = generateCucumberRuntimeTag(common, environment, getEnvList(), 'regression');
 
 export {dev, smoke, regression};

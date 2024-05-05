@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 13.109 - stabilization">
+    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 13.112 - env specific values lookup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/config/mappings/playground.json" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/config/mappings/playground.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/env/common.env" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/env/common.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/env/localhost.env" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/env/localhost.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/env/production.env" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/env/production.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/env/global.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/env/global.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/features/playground/inputs.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/playground/inputs.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/features/playground/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/playground/login.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/form.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/form.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,34 +107,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber.js.Scenario: As a user I can interact an....executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Shell Script.cucumber:dev.executor": "Run",
-    "Shell Script.cucumber:regression.executor": "Run",
-    "Shell Script.cucumber:smoke.executor": "Run",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/src/step-definitions/assertions",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.cucumber.cucumber_node_package_dir": "/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/node_modules/@cucumber/cucumber",
-    "nodejs_package_manager_path": "yarn",
-    "npm.cucumber.executor": "Run",
-    "npm.cucumber:dev.executor": "Run",
-    "npm.cucumber:regression.executor": "Run",
-    "npm.cucumber:smoke.executor": "Run",
-    "npm.cuke:production:dev.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber.js.Scenario: As a user I can interact an....executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Shell Script.cucumber:dev.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.cucumber:regression.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.cucumber:smoke.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/src/step-definitions/assertions&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.cucumber.cucumber_node_package_dir&quot;: &quot;/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/node_modules/@cucumber/cucumber&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;npm.cucumber.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cucumber:dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cucumber:regression.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cucumber:smoke.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cuke:localhost:dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cuke:production:dev.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/e2e/src/step-definitions/assertions" />
@@ -152,7 +151,7 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.cuke:production:dev">
+  <component name="RunManager" selected="npm.cuke:localhost:dev">
     <configuration name="cucumber:dev" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -315,7 +314,9 @@
       <workItem from="1699412249451" duration="22000" />
       <workItem from="1705029937949" duration="79032000" />
       <workItem from="1711697776136" duration="12391000" />
-      <workItem from="1714819591408" duration="12638000" />
+      <workItem from="1714819591408" duration="13442000" />
+      <workItem from="1714895962286" duration="2137000" />
+      <workItem from="1714901301435" duration="853000" />
     </task>
     <task id="LOCAL-00001" summary="section 4.23">
       <option name="closed" value="true" />
@@ -525,7 +526,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714890535241</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="section 13.112 - env specific values lookup">
+      <option name="closed" value="true" />
+      <created>1714895230319</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1714895230319</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -590,7 +599,8 @@
     <MESSAGE value="section 12.101 - drop down, select boxes, refreshing" />
     <MESSAGE value="section 13.104 - multiple environments" />
     <MESSAGE value="section 13.109 - stabilization" />
-    <option name="LAST_COMMIT_MESSAGE" value="section 13.109 - stabilization" />
+    <MESSAGE value="section 13.112 - env specific values lookup" />
+    <option name="LAST_COMMIT_MESSAGE" value="section 13.112 - env specific values lookup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -598,25 +608,21 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-value.ts</url>
           <line>54</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/e2e/src/step-definitions/form.ts</url>
           <line>19</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-value.ts</url>
           <line>37</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-value.ts</url>
           <line>69</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
