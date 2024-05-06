@@ -2,13 +2,16 @@ import {After, Before, BeforeStep, ITestCaseHookParameter, setDefaultTimeout} fr
 import {PickleStepType} from "@cucumber/messages"
 import {ScenarioWorld} from "./world";
 import {env, envNumber} from '../../env/parseEnv';
+import {getViewPort} from "../../support/browser-behaviour";
+import {BrowserContextOptions} from "playwright";
 
 setDefaultTimeout(envNumber('SCRIPT_TIMEOUT'));
 
 Before(async function(this: ScenarioWorld, scenario) {
     console.log(`Running cucumber scenario ${scenario.pickle.name}`);
 
-    const contextOptions = {
+    const contextOptions : BrowserContextOptions = {
+        viewport: getViewPort(),
         ignoreHTTPSErrors: true,
         recordVideo: {
             dir: `${env('VIDEO_PATH')}${scenario.pickle.name}`,
