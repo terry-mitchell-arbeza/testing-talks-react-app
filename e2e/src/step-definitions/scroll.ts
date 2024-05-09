@@ -2,7 +2,7 @@ import { Given } from '@cucumber/cucumber'
 import {ScenarioWorld} from "./setup/world";
 import {ElementKey} from "../env/global";
 import {getElementLocator} from "../support/web-element-helper";
-import {waitFor} from "../support/wait-for-behaviour";
+import {waitFor, waitForSelector} from "../support/wait-for-behaviour";
 import {scrollIntoView} from "../support/html-behaviour";
 
 Given(
@@ -16,12 +16,10 @@ Given(
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
 
         await waitFor(async () => {
-            const result = await page.waitForSelector(elementIdentifier, {
-                state: 'visible'
-            });
-            if(result){
+            const elementStable = await waitForSelector(page, elementIdentifier);
+            if(elementStable){
                 await scrollIntoView(page, elementIdentifier);
             }
-            return result;
+            return elementStable;
         })
     })

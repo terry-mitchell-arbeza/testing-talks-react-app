@@ -2,7 +2,7 @@ import {Then, When} from "@cucumber/cucumber";
 import {ScenarioWorld} from "./setup/world";
 import {ElementKey} from "../env/global";
 import {getElementLocator} from "../support/web-element-helper";
-import {waitFor} from "../support/wait-for-behaviour";
+import {waitFor, waitForSelectorOnPage} from "../support/wait-for-behaviour";
 import {getIframeElement, inputValueOnPage} from "../support/html-behaviour";
 
 When(
@@ -19,14 +19,12 @@ When(
 
         await waitFor(async () => {
             const pages = context.pages();
-            const result = await pages[pageIndex].waitForSelector(elementIdentifier, {
-                state: 'visible'
-            });
-            if(result) {
+            const elementStable = await waitForSelectorOnPage(page, elementIdentifier, pages, pageIndex);
+            if(elementStable) {
                 await inputValueOnPage(pages, pageIndex, elementIdentifier, inputValue);
             }
-            return result;
-        })
+            return elementStable;
+        });
 
     }
 );

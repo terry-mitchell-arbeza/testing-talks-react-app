@@ -2,7 +2,7 @@ import {When} from "@cucumber/cucumber";
 import {ScenarioWorld} from "./setup/world";
 import {ElementKey} from "../env/global";
 import {getElementLocator} from "../support/web-element-helper";
-import {waitFor} from "../support/wait-for-behaviour";
+import {waitFor, waitForSelector} from "../support/wait-for-behaviour";
 import {getIframeElement, inputValue, inputValueOnIframe} from "../support/html-behaviour";
 
 When(/^I fill in the "([^"]*)" input on the "([^"]*)" iframe with "([^"]*)"$/,
@@ -16,17 +16,15 @@ When(/^I fill in the "([^"]*)" input on the "([^"]*)" iframe with "([^"]*)"$/,
         const iframeIdentifier = getElementLocator(page, iframeName, globalConfig);
 
         await waitFor(async () => {
-            const elementIframe = await getIframeElement(page, iframeIdentifier);
+            const iframeStable = await waitForSelector(page, iframeIdentifier);
 
-            const result = await page.waitForSelector(iframeIdentifier, {
-                state: 'visible'});
-
-            if(result){
+            if(iframeStable){
+                const elementIframe = await getIframeElement(page, iframeIdentifier);
                 if(elementIframe) {
                     await inputValueOnIframe(elementIframe, elementIdentifier, inputValue);
                 }
             }
-            return result;
+            return iframeStable;
         });
 
     }
