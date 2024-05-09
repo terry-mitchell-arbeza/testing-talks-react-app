@@ -4,11 +4,12 @@ import {ScenarioWorld} from "./world";
 import {env, envNumber} from '../../env/parseEnv';
 import {getViewPort} from "../../support/browser-behaviour";
 import {BrowserContextOptions} from "playwright";
+import {logger} from "../../logger";
 
 setDefaultTimeout(envNumber('SCRIPT_TIMEOUT'));
 
 Before(async function(this: ScenarioWorld, scenario) {
-    console.log(`Running cucumber scenario ${scenario.pickle.name}`);
+    logger.log(`Running cucumber scenario ${scenario.pickle.name}`);
 
     const contextOptions : BrowserContextOptions = {
         viewport: getViewPort(),
@@ -31,7 +32,7 @@ BeforeStep(async function(this: ScenarioWorld, scenario) {
         }
     }
     const gwt = toGivenWhenThen(scenario.pickleStep.type);
-    console.log(`${gwt? `${gwt} `: ''}${scenario.pickleStep.text}`);
+    logger.log(`${gwt? `${gwt} `: ''}${scenario.pickleStep.text}`);
 })
 
 After(async function(this: ScenarioWorld, scenario: ITestCaseHookParameter) {

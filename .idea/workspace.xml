@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 13.114 - example tables on specific environments">
+    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 13.118 - device emulation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/env/common.env" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/env/common.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/features/home-page.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/home-page.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/src/features/playground/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/playground/login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/navigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/navigation.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/setup/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/setup/hooks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/support/wait-for-behaviour.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/support/wait-for-behaviour.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +131,7 @@
     "npm.cucumber:regression.executor": "Run",
     "npm.cucumber:smoke.executor": "Run",
     "npm.cuke:localhost:dev.executor": "Run",
+    "npm.cuke:localhost:regression.executor": "Run",
     "npm.cuke:production:dev.executor": "Run",
     "npm.cuke:production:regression.executor": "Run",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -150,7 +154,7 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.cuke:production:regression">
+  <component name="RunManager" selected="npm.cuke:localhost:regression">
     <configuration name="cucumber:dev" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -315,7 +319,7 @@
       <workItem from="1711697776136" duration="12391000" />
       <workItem from="1714819591408" duration="13442000" />
       <workItem from="1714895962286" duration="2137000" />
-      <workItem from="1714901301435" duration="2913000" />
+      <workItem from="1714901301435" duration="7706000" />
     </task>
     <task id="LOCAL-00001" summary="section 4.23">
       <option name="closed" value="true" />
@@ -541,7 +545,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714902164030</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="section 13.118 - device emulation">
+      <option name="closed" value="true" />
+      <created>1714995013241</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1714995013241</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -582,7 +594,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="workspace file" />
     <MESSAGE value="section 4.27 shell and batch scripts" />
     <MESSAGE value="section 5.30 hosts and pages json" />
     <MESSAGE value="section 5.34 element mappings" />
@@ -607,7 +618,8 @@
     <MESSAGE value="section 13.109 - stabilization" />
     <MESSAGE value="section 13.112 - env specific values lookup" />
     <MESSAGE value="section 13.114 - example tables on specific environments" />
-    <option name="LAST_COMMIT_MESSAGE" value="section 13.114 - example tables on specific environments" />
+    <MESSAGE value="section 13.118 - device emulation" />
+    <option name="LAST_COMMIT_MESSAGE" value="section 13.118 - device emulation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -5,11 +5,11 @@ import {
 } from '../support/navigation-behaviour';
 import {ScenarioWorld} from "./setup/world";
 import {waitFor} from "../support/wait-for-behaviour";
+import {logger} from "../logger";
 
 Given(
     /^I navigate to the "([^"]*)" page$/,
     async function(this: ScenarioWorld, pageId: PageId) {
-        console.log(`I am on the ${pageId} page`);
 
         const {
             screen: { page},
