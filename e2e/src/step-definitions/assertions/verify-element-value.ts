@@ -2,7 +2,7 @@ import {Then} from '@cucumber/cucumber'
 import { ElementKey } from '../../env/global';
 import { getElementLocator} from '../../support/web-element-helper';
 import {ScenarioWorld} from "../setup/world";
-import {waitFor, waitForSelector} from "../../support/wait-for-behaviour";
+import {waitFor, waitForResult, waitForSelector} from "../../support/wait-for-behaviour";
 import {
     elementEnabled,
     getAttributeText,
@@ -26,13 +26,21 @@ Then(
                 const elementStable = await waitForSelector(page, elementIdentifier);
                 if(elementStable){
                     const elementText = await getElementText(page, elementIdentifier);
-                    return elementText?.includes(expectedElementText) === !negate;
+                    if(elementText?.includes(expectedElementText) === !negate) {
+                        return waitForResult.PASS
+                    } else {
+                        return waitForResult.FAIL
+                    }
                 } else {
-                    return elementStable;
+                    return waitForResult.ELEMENT_NOT_AVAILABLE;
                 }
             },
             globalConfig,
-            {target: elementKey});
+            {
+                target: elementKey,
+                failureMessage: `🧨 Expected ${elementKey} to ${negate? 'not ': ''}contain the text "${expectedElementText}"`
+            }
+        );
     }
 );
 
@@ -51,13 +59,21 @@ Then(
                 const elementStable = await waitForSelector(page, elementIdentifier);
                 if(elementStable) {
                     const elementText = await getElementText(page, elementIdentifier);
-                    return (elementText === expectedElementText) === !negate;
+                    if ((elementText === expectedElementText) === !negate) {
+                        return waitForResult.PASS;
+                    } else {
+                        return waitForResult.FAIL;
+                    }
                 } else {
-                    return elementStable;
+                    return waitForResult.ELEMENT_NOT_AVAILABLE;
                 }
             },
             globalConfig,
-            {target: elementKey});
+            {
+                target: elementKey,
+                failureMessage: `🧨 Expected ${elementKey} to ${negate? 'not ' : ''}equal the text "${expectedElementText}"`
+            }
+        );
     }
 );
 Then(/^the "([^"]*)" should (not )?contain the value "([^"]*)"$/,
@@ -74,14 +90,22 @@ Then(/^the "([^"]*)" should (not )?contain the value "([^"]*)"$/,
                 const elementStable = await waitForSelector(page, elementIdentifier);
                 if(elementStable) {
                     const elementText = await getElementValue(page, elementIdentifier);
-                    return (elementText === expectedElementValue) === !negate;
+                    if ((elementText === expectedElementValue) === !negate) {
+                        return waitForResult.PASS;
+                    } else {
+                        return waitForResult.FAIL;
+                    }
                 } else {
-                    return elementStable;
+                    return waitForResult.ELEMENT_NOT_AVAILABLE;
                 }
 
             },
             globalConfig,
-            {target: elementKey});
+            {
+                target: elementKey,
+                failureMessage: `🧨 Expected ${elementKey} to ${negate? 'not ': ''}contain the value "${expectedElementValue}"`
+            }
+        );
     }
 );
 Then(/^the "([^"]*)" should (not )?equal the value "([^"]*)"$/,
@@ -98,13 +122,21 @@ Then(/^the "([^"]*)" should (not )?equal the value "([^"]*)"$/,
                 const elementStable = await waitForSelector(page, elementIdentifier);
                 if(elementStable) {
                     const elementText = await getElementValue(page, elementIdentifier);
-                    return (elementText === expectedElementValue) === !negate;
+                    if ((elementText === expectedElementValue) === !negate) {
+                        return waitForResult.PASS;
+                    } else {
+                        return waitForResult.FAIL;
+                    }
                 } else {
-                    return elementStable;
+                    return waitForResult.ELEMENT_NOT_AVAILABLE;
                 }
             },
             globalConfig,
-            {target: elementKey});
+            {
+                target: elementKey,
+                failureMessage: `🧨 Expected ${elementKey} to ${negate? 'not ' : ''}equal the text "${expectedElementValue}"`
+            }
+        );
     });
 Then(/^the "([^"]*)" should (not )?be enabled$/,
     async function (this: ScenarioWorld, elementKey: ElementKey, negate: boolean) {
@@ -120,13 +152,21 @@ Then(/^the "([^"]*)" should (not )?be enabled$/,
                 const elementStable = await waitForSelector(page, elementIdentifier);
                 if(elementStable) {
                     const isElementEnabled = await elementEnabled(page, elementIdentifier);
-                    return isElementEnabled === !negate;
+                    if(isElementEnabled === !negate) {
+                        return waitForResult.PASS;
+                    } else {
+                        return waitForResult.FAIL;
+                    }
                 } else {
-                    return elementStable;
+                    return waitForResult.ELEMENT_NOT_AVAILABLE;
                 }
             },
             globalConfig,
-            {target: elementKey});
+            {
+                target: elementKey,
+                failureMessage: `🧨 Expected ${elementKey} to ${negate? 'not ': ''}be enabled`
+            }
+        );
     }
 );
 Then(/^the "((?<!\d)(?:1st|2nd|3rd)|\d*(?:1[123]th|[02-9](?:1st|2nd|3rd)|[04-9]th))" "([^"]*)" should (not )?contain the text "([^"]*)"$/,
@@ -144,13 +184,21 @@ Then(/^the "((?<!\d)(?:1st|2nd|3rd)|\d*(?:1[123]th|[02-9](?:1st|2nd|3rd)|[04-9]t
                 const elementStable = await waitForSelector(page, elementIdentifier);
                 if(elementStable) {
                     const elementText = await getElementTextAtIndex(page, elementIdentifier, elementIndex);
-                    return elementText?.includes(expectedElementText) === !negate;
+                    if (elementText?.includes(expectedElementText) === !negate) {
+                        return waitForResult.PASS;
+                    } else {
+                        return waitForResult.FAIL;
+                    }
                 } else {
-                    return elementStable;
+                    return waitForResult.ELEMENT_NOT_AVAILABLE;
                 }
             },
             globalConfig,
-            {target: elementKey});
+            {
+                target: elementKey,
+                failureMessage:`🧨 Expected the ${elementPosition} ${elementKey} to ${negate? 'not ': ''}contain the text "${expectedElementText}"`
+            }
+        );
     }
 );
 
@@ -167,12 +215,20 @@ Then(/^the "([^"]*)" "([^"]*)" attribute should (not )?contain the text "(.*)"$/
                 const elementStable = await waitForSelector(page, elementIdentifier);
                 if(elementStable){
                     const attributeText = await getAttributeText(page, elementIdentifier, attribute);
-                    return attributeText?.includes(expectedElementText) === !negate
+                    if (attributeText?.includes(expectedElementText) === !negate) {
+                        return waitForResult.PASS;
+                    } else {
+                        return waitForResult.FAIL;
+                    }
                 } else {
-                    return elementStable;
+                    return waitForResult.ELEMENT_NOT_AVAILABLE;
                 }
             },
             globalConfig,
-            {target: elementKey});
+            {
+                target: elementKey,
+                failureMessage: `🧨 Expected the ${elementKey} ${attribute} to ${negate ? 'not ':''}contain the text "${expectedElementText}"`
+            }
+        );
     }
 );

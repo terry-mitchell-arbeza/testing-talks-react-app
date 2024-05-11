@@ -2,7 +2,7 @@ import {DataTable, Then} from '@cucumber/cucumber'
 import { ElementKey } from '../../env/global';
 import { getElementLocator} from '../../support/web-element-helper';
 import {ScenarioWorld} from "../setup/world";
-import {waitFor, waitForSelector} from "../../support/wait-for-behaviour";
+import {waitFor, waitForResult, waitForSelector} from "../../support/wait-for-behaviour";
 import {getTableData} from "../../support/html-behaviour";
 
 Then(/^the "([^"]*)" table should (not )?equal the following:$/,
@@ -18,12 +18,20 @@ Then(/^the "([^"]*)" table should (not )?equal the following:$/,
                 const elementStable = await waitForSelector(page, elementIdentifier);
                 if(elementStable) {
                     const tableData = await getTableData(page, elementIdentifier);
-                    return tableData === JSON.stringify(dataTable.raw()) === !negate;
+                    if (tableData === JSON.stringify(dataTable.raw()) === !negate) {
+                        return waitForResult.PASS;
+                    } else {
+                        return waitForResult.FAIL;
+                    }
                 } else {
-                    return elementStable;
+                    return waitForResult.ELEMENT_NOT_AVAILABLE;
                 }
             },
             globalConfig,
-            {target: elementKey});
+            {
+                target: elementKey,
+                failureMessage: `🧨 Expected ${elementKey} to ${negate ? 'not ': ''}equal ${dataTable.raw()}`
+            }
+        );
     }
 );

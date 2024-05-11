@@ -4,7 +4,6 @@ Feature: As a user I expect to be able to navigate to the home page
     Given I navigate to the "home" page
     And I am directed to the "home" page
 
-  @dev
   @smoke
   @regression
   Scenario: As a user I expect to be able to see contacts

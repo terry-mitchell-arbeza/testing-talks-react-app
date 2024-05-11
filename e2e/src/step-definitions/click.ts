@@ -3,7 +3,7 @@ import {ScenarioWorld} from "./setup/world";
 import {
     clickElement, clickElementAtIndex
 } from "../support/html-behaviour";
-import {waitFor, waitForSelector} from "../support/wait-for-behaviour";
+import {waitFor, waitForResult, waitForSelector} from "../support/wait-for-behaviour";
 import {getElementLocator} from "../support/web-element-helper";
 import {ElementKey} from "../env/global";
 
@@ -21,11 +21,13 @@ When(
                 const elementStable = await waitForSelector(page, elementIdentifier);
                 if(elementStable){
                     await clickElement(page, elementIdentifier);
+                    return waitForResult.PASS;
                 }
-                return elementStable;
+                return waitForResult.ELEMENT_NOT_AVAILABLE;
             },
             globalConfig,
-            {target: elementKey});
+            {target: elementKey}
+        );
     }
 )
 When(/^I click the "((?<!\d)(?:1st|2nd|3rd)|\d*(?:1[123]th|[02-9](?:1st|2nd|3rd)|[04-9]th))" "([^"]*)" (?:button|link|icon|element)$/,
@@ -43,10 +45,12 @@ When(/^I click the "((?<!\d)(?:1st|2nd|3rd)|\d*(?:1[123]th|[02-9](?:1st|2nd|3rd)
                 const elementStable = await waitForSelector(page, elementIdentifier);
                 if(elementStable){
                     await clickElementAtIndex(page, elementIdentifier, elementIndex);
+                    return waitForResult.PASS;
                 }
-                return elementStable;
+                return waitForResult.ELEMENT_NOT_AVAILABLE;
             },
             globalConfig,
-            {target: elementKey});
+            {target: elementKey}
+        );
     }
 );

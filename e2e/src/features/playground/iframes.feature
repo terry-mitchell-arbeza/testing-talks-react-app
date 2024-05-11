@@ -4,11 +4,12 @@ Feature: As a user I can interact with iframes
     Given I navigate to the "playground" page
     And I am directed to the "playground" page
 
+  @dev
   @smoke
   @regression
   Scenario: As a user I can interact with and assert on iframes
+    #Given I scroll to the "basic iframe"
     When I fill in the "search" input on the "basic iframe" iframe with "Abraham Perry"
-    And I scroll to the "basic iframe"
     Then the "contact" on the "basic iframe" iframe should be displayed
     And the "full name label" on the "basic iframe" iframe should contain the text "Name:"
     And the "name" on the "basic iframe" iframe should equal the text "Abraham Perry"

@@ -2,7 +2,7 @@ import {Then, When} from "@cucumber/cucumber";
 import {ScenarioWorld} from "./setup/world";
 import {ElementKey} from "../env/global";
 import {getElementLocator} from "../support/web-element-helper";
-import {waitFor, waitForSelectorOnPage} from "../support/wait-for-behaviour";
+import {waitFor, waitForResult, waitForSelectorOnPage} from "../support/wait-for-behaviour";
 import {getIframeElement, inputValueOnPage} from "../support/html-behaviour";
 
 When(
@@ -22,8 +22,9 @@ When(
                 const elementStable = await waitForSelectorOnPage(page, elementIdentifier, pages, pageIndex);
                 if(elementStable) {
                     await inputValueOnPage(pages, pageIndex, elementIdentifier, inputValue);
+                    return waitForResult.PASS;
                 }
-                return elementStable;
+                return waitForResult.ELEMENT_NOT_AVAILABLE;
             },
             globalConfig,
             {target: elementKey});
