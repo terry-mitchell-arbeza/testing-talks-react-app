@@ -1,9 +1,9 @@
-import {When } from '@cucumber/cucumber'
+import {When} from '@cucumber/cucumber'
 import {waitFor, waitForSelector} from "../support/wait-for-behaviour";
-import { getElementLocator} from "../support/web-element-helper";
+import {getElementLocator} from "../support/web-element-helper";
 import {ScenarioWorld} from "./setup/world";
 import {ElementKey} from "../env/global";
-import {inputValue, selectValue} from "../support/html-behaviour";
+import {inputElementValue, selectElementValue} from "../support/html-behaviour";
 import {parseInput} from "../support/input-helper";
 
 When(
@@ -21,7 +21,7 @@ When(
             if(elementStable){
                 const parsedInput = parseInput(input, globalConfig);
 
-                await inputValue(page, elementIdentifier, parsedInput);
+                await inputElementValue(page, elementIdentifier, parsedInput);
             }
             return elementStable;
         });
@@ -41,7 +41,7 @@ When(
         await waitFor(async () => {
             const elementStable = await waitForSelector(page, elementIdentifier);
             if(elementStable){
-                await selectValue(page, elementIdentifier, option);
+                await selectElementValue(page, elementIdentifier, option);
             }
             return elementStable;
         });

@@ -3,7 +3,7 @@ import {ScenarioWorld} from "./setup/world";
 import {ElementKey} from "../env/global";
 import {getElementLocator} from "../support/web-element-helper";
 import {waitFor, waitForSelector} from "../support/wait-for-behaviour";
-import {getIframeElement, inputValue, inputValueOnIframe} from "../support/html-behaviour";
+import {getIframeElement, inputValueOnIframe} from "../support/html-behaviour";
 
 When(/^I fill in the "([^"]*)" input on the "([^"]*)" iframe with "([^"]*)"$/,
     async function (this: ScenarioWorld, elementKey: ElementKey, iframeName: string, inputValue: string) {

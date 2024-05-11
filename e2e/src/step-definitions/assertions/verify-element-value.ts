@@ -2,8 +2,14 @@ import {Then} from '@cucumber/cucumber'
 import { ElementKey } from '../../env/global';
 import { getElementLocator} from '../../support/web-element-helper';
 import {ScenarioWorld} from "../setup/world";
-import { waitFor} from "../../support/wait-for-behaviour";
-import {getAttributeText, getValue} from "../../support/html-behaviour";
+import {waitFor, waitForSelector} from "../../support/wait-for-behaviour";
+import {
+    elementEnabled,
+    getAttributeText,
+    getElementText,
+    getElementTextAtIndex,
+    getElementValue
+} from "../../support/html-behaviour";
 
 Then(
     /^the "([^"]*)" should (not )?contain the text "(.*)"$/,
@@ -17,8 +23,13 @@ Then(
 
         await waitFor(async () => {
             //await page.pause();
-            const elementText = await page.textContent(elementIdentifier);
-            return elementText?.includes(expectedElementText) === !negate;
+            const elementStable = await waitForSelector(page, elementIdentifier);
+            if(elementStable){
+                const elementText = await getElementText(page, elementIdentifier);
+                return elementText?.includes(expectedElementText) === !negate;
+            } else {
+                return elementStable;
+            }
         });
     }
 );
@@ -35,8 +46,13 @@ Then(
 
         await waitFor(async () => {
             //await page.pause();
-            const elementText = await page.textContent(elementIdentifier);
-            return (elementText === expectedElementText) === !negate;
+            const elementStable = await waitForSelector(page, elementIdentifier);
+            if(elementStable) {
+                const elementText = await getElementText(page, elementIdentifier);
+                return (elementText === expectedElementText) === !negate;
+            } else {
+                return elementStable;
+            }
         });
     }
 );
@@ -51,8 +67,14 @@ Then(/^the "([^"]*)" should (not )?contain the value "([^"]*)"$/,
 
         await waitFor(async () => {
             //await page.pause();
-            const elementText = await getValue(page, elementIdentifier);
-            return (elementText === expectedElementValue) === !negate;
+            const elementStable = await waitForSelector(page, elementIdentifier);
+            if(elementStable) {
+                const elementText = await getElementValue(page, elementIdentifier);
+                return (elementText === expectedElementValue) === !negate;
+            } else {
+                return elementStable;
+            }
+
         });
     }
 );
@@ -67,8 +89,13 @@ Then(/^the "([^"]*)" should (not )?equal the value "([^"]*)"$/,
 
         await waitFor(async () => {
             //await page.pause();
-            const elementText = await getValue(page, elementIdentifier);
-            return (elementText === expectedElementValue) === !negate;
+            const elementStable = await waitForSelector(page, elementIdentifier);
+            if(elementStable) {
+                const elementText = await getElementValue(page, elementIdentifier);
+                return (elementText === expectedElementValue) === !negate;
+            } else {
+                return elementStable;
+            }
         });
 });
 Then(/^the "([^"]*)" should (not )?be enabled$/,
@@ -82,8 +109,13 @@ Then(/^the "([^"]*)" should (not )?be enabled$/,
 
         await waitFor(async () => {
             //await page.pause();
-            const isElementEnabled = await page.isEnabled(elementIdentifier);
-            return isElementEnabled === !negate;
+            const elementStable = await waitForSelector(page, elementIdentifier);
+            if(elementStable) {
+                const isElementEnabled = await elementEnabled(page, elementIdentifier);
+                return isElementEnabled === !negate;
+            } else {
+                return elementStable;
+            }
         });
     }
 );
@@ -99,8 +131,13 @@ Then(/^the "((?<!\d)(?:1st|2nd|3rd)|\d*(?:1[123]th|[02-9](?:1st|2nd|3rd)|[04-9]t
         const elementIndex = Number(elementPosition.match(/\d/g)?.join('')) - 1;
 
         await waitFor(async () => {
-            const elementText = await page.textContent(`${elementIdentifier}>>nth=${elementIndex}`);
-            return elementText?.includes(expectedElementText) === !negate;
+            const elementStable = await waitForSelector(page, elementIdentifier);
+            if(elementStable) {
+                const elementText = await getElementTextAtIndex(page, elementIdentifier, elementIndex);
+                return elementText?.includes(expectedElementText) === !negate;
+            } else {
+                return elementStable;
+            }
         });
     }
 );
@@ -115,8 +152,13 @@ Then(/^the "([^"]*)" "([^"]*)" attribute should (not )?contain the text "(.*)"$/
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
 
         await waitFor(async () => {
-           const attributeText = await getAttributeText(page, elementIdentifier, attribute);
-           return attributeText?.includes(expectedElementText) === !negate
+           const elementStable = await waitForSelector(page, elementIdentifier);
+           if(elementStable){
+               const attributeText = await getAttributeText(page, elementIdentifier, attribute);
+               return attributeText?.includes(expectedElementText) === !negate
+           } else {
+               return elementStable;
+           }
         });
     }
 );

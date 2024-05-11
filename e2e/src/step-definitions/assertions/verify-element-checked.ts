@@ -2,7 +2,8 @@ import {Given, Then} from "@cucumber/cucumber";
 import {ScenarioWorld} from "../setup/world";
 import {ElementKey} from "../../env/global";
 import {getElementLocator} from "../../support/web-element-helper";
-import {waitFor} from "../../support/wait-for-behaviour";
+import {waitFor, waitForSelector} from "../../support/wait-for-behaviour";
+import {elementChecked} from "../../support/html-behaviour";
 
 Given(
     /^the "([^"]*)" (?:radio button|check box|switch) should (not )?be checked$/,
@@ -16,8 +17,13 @@ Given(
 
         await waitFor(async () => {
             //await page.pause();
-            const isElementChecked = await page.isChecked(elementIdentifier);
-            return isElementChecked === !negate;
+            const elementStable = await waitForSelector(page, elementIdentifier);
+            if(elementStable) {
+                const isElementChecked= await elementChecked(page, elementIdentifier);
+                return isElementChecked === !negate
+            } else {
+                return elementStable;
+            }
         });
     }
 );

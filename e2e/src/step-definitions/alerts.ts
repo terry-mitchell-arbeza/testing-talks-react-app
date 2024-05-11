@@ -1,7 +1,6 @@
 import {When} from "@cucumber/cucumber";
 import {ScenarioWorld} from "./setup/world";
 
-
 When(
     /^I click (accept|dismiss) on the alert dialog$/,
     async function(this: ScenarioWorld, dialogAction: string) {

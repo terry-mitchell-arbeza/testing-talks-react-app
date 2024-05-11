@@ -2,8 +2,8 @@ import {Then} from "@cucumber/cucumber";
 import {getElementLocator} from "../../support/web-element-helper";
 import {ScenarioWorld} from "../setup/world";
 import {ElementKey} from "../../env/global";
-import {getIframeElement} from "../../support/html-behaviour";
-import {waitFor} from "../../support/wait-for-behaviour";
+import {getElementWithinIframe, getIframeElement, getTextWithinIframeElement} from "../../support/html-behaviour";
+import {waitFor, waitForSelectorInIframe} from "../../support/wait-for-behaviour";
 
 Then(/^the "([^"]*)" on the "([^"]*)" iframe should (not )?be displayed$/,
     async function (this: ScenarioWorld, elementKey: ElementKey, iframeName: string, negate: boolean) {
@@ -17,8 +17,17 @@ Then(/^the "([^"]*)" on the "([^"]*)" iframe should (not )?be displayed$/,
 
         await waitFor(async () => {
             const elementIframe = await getIframeElement(page, iframeIdentifier);
-            const isElementVisible = (await elementIframe?.$(elementIdentifier)) != null;
-            return isElementVisible === !negate;
+            if(elementIframe) {
+                const elementStable = await waitForSelectorInIframe(elementIframe, elementIdentifier);
+                if(elementStable) {
+                    const isElementVisible = await getElementWithinIframe(elementIframe, elementIdentifier) != null;
+                    return isElementVisible === !negate;
+                } else {
+                    return elementStable;
+                }
+            } else {
+                return false;
+            }
         });
 
 });
@@ -35,8 +44,17 @@ Then(/^the "([^"]*)" on the "([^"]*)" iframe should (not )?contain the text "([^
 
         await waitFor(async () => {
             const elementIframe = await getIframeElement(page, iframeIdentifier);
-            const elementText = await elementIframe?.textContent(elementIdentifier);
-            return elementText?.includes(expectedElementText) === !negate;
+            if(elementIframe) {
+                const elementStable = await waitForSelectorInIframe(elementIframe, elementIdentifier);
+                if(elementStable) {
+                    const elementText = await getTextWithinIframeElement(elementIframe, elementIdentifier);
+                    return elementText?.includes(expectedElementText) === !negate;
+                } else {
+                    return elementStable;
+                }
+            } else {
+                return false;
+            }
         });
     }
 );
@@ -53,8 +71,17 @@ Then(/^the "([^"]*)" on the "([^"]*)" iframe should (not )?equal the text "([^"]
 
         await waitFor(async () => {
             const elementIframe = await getIframeElement(page, iframeIdentifier);
-            const elementText = await elementIframe?.textContent(elementIdentifier);
-            return (elementText === expectedElementText) === !negate;
+            if(elementIframe) {
+                const elementStable = await waitForSelectorInIframe(elementIframe, elementIdentifier);
+                if(elementStable) {
+                    const elementText = await getTextWithinIframeElement(elementIframe, elementIdentifier);
+                    return (elementText === expectedElementText) === !negate;
+                } else {
+                    return elementStable;
+                }
+            } else {
+                return false;
+            }
         });
     }
 );
