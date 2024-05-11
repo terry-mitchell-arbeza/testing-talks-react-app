@@ -22,15 +22,17 @@ Then(
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
 
         await waitFor(async () => {
-            //await page.pause();
-            const elementStable = await waitForSelector(page, elementIdentifier);
-            if(elementStable){
-                const elementText = await getElementText(page, elementIdentifier);
-                return elementText?.includes(expectedElementText) === !negate;
-            } else {
-                return elementStable;
-            }
-        });
+                //await page.pause();
+                const elementStable = await waitForSelector(page, elementIdentifier);
+                if(elementStable){
+                    const elementText = await getElementText(page, elementIdentifier);
+                    return elementText?.includes(expectedElementText) === !negate;
+                } else {
+                    return elementStable;
+                }
+            },
+            globalConfig,
+            {target: elementKey});
     }
 );
 
@@ -45,15 +47,17 @@ Then(
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
 
         await waitFor(async () => {
-            //await page.pause();
-            const elementStable = await waitForSelector(page, elementIdentifier);
-            if(elementStable) {
-                const elementText = await getElementText(page, elementIdentifier);
-                return (elementText === expectedElementText) === !negate;
-            } else {
-                return elementStable;
-            }
-        });
+                //await page.pause();
+                const elementStable = await waitForSelector(page, elementIdentifier);
+                if(elementStable) {
+                    const elementText = await getElementText(page, elementIdentifier);
+                    return (elementText === expectedElementText) === !negate;
+                } else {
+                    return elementStable;
+                }
+            },
+            globalConfig,
+            {target: elementKey});
     }
 );
 Then(/^the "([^"]*)" should (not )?contain the value "([^"]*)"$/,
@@ -66,16 +70,18 @@ Then(/^the "([^"]*)" should (not )?contain the value "([^"]*)"$/,
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
 
         await waitFor(async () => {
-            //await page.pause();
-            const elementStable = await waitForSelector(page, elementIdentifier);
-            if(elementStable) {
-                const elementText = await getElementValue(page, elementIdentifier);
-                return (elementText === expectedElementValue) === !negate;
-            } else {
-                return elementStable;
-            }
+                //await page.pause();
+                const elementStable = await waitForSelector(page, elementIdentifier);
+                if(elementStable) {
+                    const elementText = await getElementValue(page, elementIdentifier);
+                    return (elementText === expectedElementValue) === !negate;
+                } else {
+                    return elementStable;
+                }
 
-        });
+            },
+            globalConfig,
+            {target: elementKey});
     }
 );
 Then(/^the "([^"]*)" should (not )?equal the value "([^"]*)"$/,
@@ -88,16 +94,18 @@ Then(/^the "([^"]*)" should (not )?equal the value "([^"]*)"$/,
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
 
         await waitFor(async () => {
-            //await page.pause();
-            const elementStable = await waitForSelector(page, elementIdentifier);
-            if(elementStable) {
-                const elementText = await getElementValue(page, elementIdentifier);
-                return (elementText === expectedElementValue) === !negate;
-            } else {
-                return elementStable;
-            }
-        });
-});
+                //await page.pause();
+                const elementStable = await waitForSelector(page, elementIdentifier);
+                if(elementStable) {
+                    const elementText = await getElementValue(page, elementIdentifier);
+                    return (elementText === expectedElementValue) === !negate;
+                } else {
+                    return elementStable;
+                }
+            },
+            globalConfig,
+            {target: elementKey});
+    });
 Then(/^the "([^"]*)" should (not )?be enabled$/,
     async function (this: ScenarioWorld, elementKey: ElementKey, negate: boolean) {
         const {
@@ -108,15 +116,17 @@ Then(/^the "([^"]*)" should (not )?be enabled$/,
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
 
         await waitFor(async () => {
-            //await page.pause();
-            const elementStable = await waitForSelector(page, elementIdentifier);
-            if(elementStable) {
-                const isElementEnabled = await elementEnabled(page, elementIdentifier);
-                return isElementEnabled === !negate;
-            } else {
-                return elementStable;
-            }
-        });
+                //await page.pause();
+                const elementStable = await waitForSelector(page, elementIdentifier);
+                if(elementStable) {
+                    const isElementEnabled = await elementEnabled(page, elementIdentifier);
+                    return isElementEnabled === !negate;
+                } else {
+                    return elementStable;
+                }
+            },
+            globalConfig,
+            {target: elementKey});
     }
 );
 Then(/^the "((?<!\d)(?:1st|2nd|3rd)|\d*(?:1[123]th|[02-9](?:1st|2nd|3rd)|[04-9]th))" "([^"]*)" should (not )?contain the text "([^"]*)"$/,
@@ -131,14 +141,16 @@ Then(/^the "((?<!\d)(?:1st|2nd|3rd)|\d*(?:1[123]th|[02-9](?:1st|2nd|3rd)|[04-9]t
         const elementIndex = Number(elementPosition.match(/\d/g)?.join('')) - 1;
 
         await waitFor(async () => {
-            const elementStable = await waitForSelector(page, elementIdentifier);
-            if(elementStable) {
-                const elementText = await getElementTextAtIndex(page, elementIdentifier, elementIndex);
-                return elementText?.includes(expectedElementText) === !negate;
-            } else {
-                return elementStable;
-            }
-        });
+                const elementStable = await waitForSelector(page, elementIdentifier);
+                if(elementStable) {
+                    const elementText = await getElementTextAtIndex(page, elementIdentifier, elementIndex);
+                    return elementText?.includes(expectedElementText) === !negate;
+                } else {
+                    return elementStable;
+                }
+            },
+            globalConfig,
+            {target: elementKey});
     }
 );
 
@@ -152,13 +164,15 @@ Then(/^the "([^"]*)" "([^"]*)" attribute should (not )?contain the text "(.*)"$/
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
 
         await waitFor(async () => {
-           const elementStable = await waitForSelector(page, elementIdentifier);
-           if(elementStable){
-               const attributeText = await getAttributeText(page, elementIdentifier, attribute);
-               return attributeText?.includes(expectedElementText) === !negate
-           } else {
-               return elementStable;
-           }
-        });
+                const elementStable = await waitForSelector(page, elementIdentifier);
+                if(elementStable){
+                    const attributeText = await getAttributeText(page, elementIdentifier, attribute);
+                    return attributeText?.includes(expectedElementText) === !negate
+                } else {
+                    return elementStable;
+                }
+            },
+            globalConfig,
+            {target: elementKey});
     }
 );

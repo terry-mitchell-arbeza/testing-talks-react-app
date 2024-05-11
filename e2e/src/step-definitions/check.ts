@@ -17,16 +17,18 @@ When(
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
 
         await waitFor(async () => {
-            const elementStable = await waitForSelector(page, elementIdentifier);
+                const elementStable = await waitForSelector(page, elementIdentifier);
 
-            if(elementStable){
-                 if(transition === 'check') {
-                     await checkElement(page, elementIdentifier);
-                 } else {
-                     await uncheckElement(page, elementIdentifier);
-                 }
-            }
-            return elementStable;
-        });
+                if(elementStable){
+                    if(transition === 'check') {
+                        await checkElement(page, elementIdentifier);
+                    } else {
+                        await uncheckElement(page, elementIdentifier);
+                    }
+                }
+                return elementStable;
+            },
+            globalConfig,
+            {target: elementKey});
     }
 );

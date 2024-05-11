@@ -4,7 +4,6 @@ Feature: As a user I can interact with drop down menus
     Given I navigate to the "playground" page
     And I am directed to the "playground" page
 
-    @dev
   @smoke
   @regression
   Scenario: As a user I can interact and assert on drop down menus

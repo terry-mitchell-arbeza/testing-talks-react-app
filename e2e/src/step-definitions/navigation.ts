@@ -17,7 +17,10 @@ Given(
 
         await navigateToPage(page, pageId, globalConfig);
 
-        await waitFor(()=> currentPathMatchesPageId(page, pageId, globalConfig));
+        await waitFor(()=> currentPathMatchesPageId(page, pageId, globalConfig), globalConfig, {
+            target: pageId,
+            type: 'page'
+        });
     }
 )
 
@@ -29,7 +32,10 @@ Given(
             globalConfig,
         } = this;
 
-        await waitFor(() => currentPathMatchesPageId(page, pageId, globalConfig));
+        await waitFor(() => currentPathMatchesPageId(page, pageId, globalConfig), globalConfig, {
+            target: pageId,
+            type: 'page'
+        });
     }
 )
 
@@ -43,8 +49,10 @@ Given(
 
         await reloadPage(page);
 
-        await waitFor(() => currentPathMatchesPageId(page, pageId, globalConfig), {
-            timeout: 30000
+        await waitFor(() => currentPathMatchesPageId(page, pageId, globalConfig), globalConfig, {
+            timeout: 30000,
+            target: pageId,
+            type: 'page'
         });
     }
 )

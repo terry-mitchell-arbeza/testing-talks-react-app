@@ -4,7 +4,7 @@ import {
     GlobalConfig,
     HostsConfig,
     PagesConfig,
-    PageElementMappings, EmailsConfig,
+    PageElementMappings, EmailsConfig, ErrorsConfig,
 
 } from "./env/global";
 import fs from "fs";
@@ -22,6 +22,8 @@ const hostsConfig: HostsConfig = getJsonFromFile(env('HOSTS_URLS_PATH'));
 const pagesConfig: PagesConfig = getJsonFromFile(env('PAGE_URLS_PATH'));
 
 const emailsConfig: EmailsConfig = getJsonFromFile(env('EMAILS_URL_PATH'));
+
+const errorsConfig: ErrorsConfig = getJsonFromFile(env('ERRORS_URL_PATH'));
 
 const mappingFiles = fs.readdirSync(`${process.cwd()}${env('PAGE_ELEMENTS_PATH')}`);
 
@@ -46,7 +48,8 @@ const worldParameters: GlobalConfig = {
     hostsConfig,
     pagesConfig,
     pageElementMappings,
-    emailsConfig
+    emailsConfig,
+    errorsConfig
 };
 
 const common = `./src/features/**/*.feature \

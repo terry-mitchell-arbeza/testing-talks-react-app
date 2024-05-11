@@ -16,16 +16,18 @@ When(/^I fill in the "([^"]*)" input on the "([^"]*)" iframe with "([^"]*)"$/,
         const iframeIdentifier = getElementLocator(page, iframeName, globalConfig);
 
         await waitFor(async () => {
-            const iframeStable = await waitForSelector(page, iframeIdentifier);
+                const iframeStable = await waitForSelector(page, iframeIdentifier);
 
-            if(iframeStable){
-                const elementIframe = await getIframeElement(page, iframeIdentifier);
-                if(elementIframe) {
-                    await inputValueOnIframe(elementIframe, elementIdentifier, inputValue);
+                if(iframeStable){
+                    const elementIframe = await getIframeElement(page, iframeIdentifier);
+                    if(elementIframe) {
+                        await inputValueOnIframe(elementIframe, elementIdentifier, inputValue);
+                    }
                 }
-            }
-            return iframeStable;
-        });
+                return iframeStable;
+            },
+            globalConfig,
+            {target: elementKey});
 
     }
 );

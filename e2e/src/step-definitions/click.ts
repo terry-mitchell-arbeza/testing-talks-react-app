@@ -18,12 +18,14 @@ When(
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
 
         await waitFor(async () => {
-            const elementStable = await waitForSelector(page, elementIdentifier);
-            if(elementStable){
-                await clickElement(page, elementIdentifier);
-            }
-            return elementStable;
-        });
+                const elementStable = await waitForSelector(page, elementIdentifier);
+                if(elementStable){
+                    await clickElement(page, elementIdentifier);
+                }
+                return elementStable;
+            },
+            globalConfig,
+            {target: elementKey});
     }
 )
 When(/^I click the "((?<!\d)(?:1st|2nd|3rd)|\d*(?:1[123]th|[02-9](?:1st|2nd|3rd)|[04-9]th))" "([^"]*)" (?:button|link|icon|element)$/,
@@ -38,11 +40,13 @@ When(/^I click the "((?<!\d)(?:1st|2nd|3rd)|\d*(?:1[123]th|[02-9](?:1st|2nd|3rd)
         const elementIndex = Number(elementPosition.match(/\d/g)?.join('')) - 1;
 
         await waitFor(async () => {
-            const elementStable = await waitForSelector(page, elementIdentifier);
-            if(elementStable){
-                await clickElementAtIndex(page, elementIdentifier, elementIndex);
-            }
-            return elementStable;
-        });
+                const elementStable = await waitForSelector(page, elementIdentifier);
+                if(elementStable){
+                    await clickElementAtIndex(page, elementIdentifier, elementIndex);
+                }
+                return elementStable;
+            },
+            globalConfig,
+            {target: elementKey});
     }
 );

@@ -16,14 +16,16 @@ Given(
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
 
         await waitFor(async () => {
-            //await page.pause();
-            const elementStable = await waitForSelector(page, elementIdentifier);
-            if(elementStable) {
-                const isElementChecked= await elementChecked(page, elementIdentifier);
-                return isElementChecked === !negate
-            } else {
-                return elementStable;
-            }
-        });
+                //await page.pause();
+                const elementStable = await waitForSelector(page, elementIdentifier);
+                if(elementStable) {
+                    const isElementChecked= await elementChecked(page, elementIdentifier);
+                    return isElementChecked === !negate
+                } else {
+                    return elementStable;
+                }
+            },
+            globalConfig,
+            {target: elementKey});
     }
 );

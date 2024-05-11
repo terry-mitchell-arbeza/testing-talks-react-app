@@ -15,13 +15,15 @@ Then(/^the "([^"]*)" table should (not )?equal the following:$/,
         const elementIdentifier = getElementLocator(page, elementKey, globalConfig);
 
         await waitFor(async () => {
-            const elementStable = await waitForSelector(page, elementIdentifier);
-            if(elementStable) {
-                const tableData = await getTableData(page, elementIdentifier);
-                return tableData === JSON.stringify(dataTable.raw()) === !negate;
-            } else {
-                return elementStable;
-            }
-        });
+                const elementStable = await waitForSelector(page, elementIdentifier);
+                if(elementStable) {
+                    const tableData = await getTableData(page, elementIdentifier);
+                    return tableData === JSON.stringify(dataTable.raw()) === !negate;
+                } else {
+                    return elementStable;
+                }
+            },
+            globalConfig,
+            {target: elementKey});
     }
 );
