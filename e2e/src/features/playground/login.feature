@@ -34,3 +34,9 @@ Feature: As a user I can interact with login forms
       | tm.testing |  |
       | tm@        |  |
 
+
+  @smoke
+  @regression
+  Scenario: As a user I am able to input a random email
+    Given I fill in the "email" input with random "email"
+    And I fill in the "password" input with random "password"

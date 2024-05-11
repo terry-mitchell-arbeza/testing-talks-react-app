@@ -18,6 +18,7 @@
     "@babel/preset-env": "^7.23.8",
     "@babel/preset-typescript": "^7.23.3",
     "@cucumber/cucumber": "^10.2.1",
+    "@faker-js/faker": "^8.4.1",
     "@playwright/test": "^1.40.1",
     "@types/node": "^20.11.0",
     "cucumber-html-reporter": "^7.1.1",
