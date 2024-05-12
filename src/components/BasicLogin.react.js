@@ -51,6 +51,7 @@ export class BasicLogin extends React.Component {
               required
               onChange={this.onInput}
               invalid={!!errors.email}
+              aria-label="email"
             />
             {errors.email && (
               <div
@@ -73,6 +74,7 @@ export class BasicLogin extends React.Component {
               minLength={3}
               onChange={this.onInput}
               invalid={!!errors.password}
+              aria-label="password"
             />
             {errors.password && (
               <div

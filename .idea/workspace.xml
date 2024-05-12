@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 20.162 - mocking setup">
+    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 20.164 - scenarios using mocking">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/env/common.env" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/env/common.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/features/playground/mock.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/playground/mock.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BasicCheckBox.react.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BasicCheckBox.react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BasicIframe.react.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BasicIframe.react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BasicIndex.react.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BasicIndex.react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BasicLogin.react.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BasicLogin.react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +157,7 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.cuke:localhost:regression">
+  <component name="RunManager" selected="npm.cuke:localhost:dev">
     <configuration name="cucumber:dev" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -315,7 +322,7 @@
       <workItem from="1711697776136" duration="12391000" />
       <workItem from="1714819591408" duration="13442000" />
       <workItem from="1714895962286" duration="2137000" />
-      <workItem from="1714901301435" duration="54497000" />
+      <workItem from="1714901301435" duration="59363000" />
     </task>
     <task id="LOCAL-00001" summary="section 4.23">
       <option name="closed" value="true" />
@@ -621,7 +628,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715484312732</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="section 20.164 - scenarios using mocking">
+      <option name="closed" value="true" />
+      <created>1715486050168</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1715486050168</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -662,7 +677,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="section 8.62 autocompletes, parallel execution, retries" />
     <MESSAGE value="section 9.66 checkboxes, auto step logging" />
     <MESSAGE value="section 9.74 iframes, tabs, windows" />
     <MESSAGE value=" section 10.79 - click and verify at index" />
@@ -687,7 +701,8 @@
     <MESSAGE value="section 19.153 - random test data" />
     <MESSAGE value="section 19.157 - additional end to end scenarios" />
     <MESSAGE value="section 20.162 - mocking setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="section 20.162 - mocking setup" />
+    <MESSAGE value="section 20.164 - scenarios using mocking" />
+    <option name="LAST_COMMIT_MESSAGE" value="section 20.164 - scenarios using mocking" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -21,6 +21,8 @@
     "@faker-js/faker": "^8.4.1",
     "@playwright/test": "^1.40.1",
     "@types/node": "^20.11.0",
+    "axe-html-reporter": "^2.2.3",
+    "axe-playwright": "^2.0.1",
     "cucumber-html-reporter": "^7.1.1",
     "dotenv": "^16.3.1",
     "playwright": "^1.40.1",
