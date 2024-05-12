@@ -4,7 +4,11 @@ import {
     GlobalConfig,
     HostsConfig,
     PagesConfig,
-    PageElementMappings, EmailsConfig, ErrorsConfig,
+    PageElementMappings,
+    EmailsConfig,
+    ErrorsConfig,
+    MocksConfig,
+    MockPayloadMappings
 
 } from "./env/global";
 import fs from "fs";
@@ -25,7 +29,11 @@ const emailsConfig: EmailsConfig = getJsonFromFile(env('EMAILS_URL_PATH'));
 
 const errorsConfig: ErrorsConfig = getJsonFromFile(env('ERRORS_URL_PATH'));
 
+const mocksConfig: MocksConfig = getJsonFromFile(env('MOCKS_URL_PATH'));
+
 const mappingFiles = fs.readdirSync(`${process.cwd()}${env('PAGE_ELEMENTS_PATH')}`);
+
+const payloadFiles = fs.readdirSync(`${process.cwd()}${env('MOCK_PAYLOAD_PATH')}`);
 
 const getEnvList = (): string[] => {
     const envList = Object.keys(hostsConfig);
@@ -44,12 +52,23 @@ const pageElementMappings: PageElementMappings = mappingFiles.reduce(
     {}
 );
 
+const mockPayloadMappings: MockPayloadMappings = payloadFiles.reduce(
+    (payloadConfigAcc, file) => {
+        const key = file.replace('.json', '');
+        const payloadMappings = getJsonFromFile(`${env('MOCK_PAYLOAD_PATH')}${file}`);
+        return { ...payloadConfigAcc, [key]: payloadMappings};
+    },
+    {}
+);
+
 const worldParameters: GlobalConfig = {
     hostsConfig,
     pagesConfig,
     pageElementMappings,
     emailsConfig,
-    errorsConfig
+    errorsConfig,
+    mocksConfig,
+    mockPayloadMappings
 };
 
 const common = `./src/features/**/*.feature \
