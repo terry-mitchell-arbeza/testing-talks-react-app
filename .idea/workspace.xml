@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 19.153 - random test data">
+    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 19.157 - additional end to end scenarios">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/config/mappings/common.json" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/config/mappings/common.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/config/pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/config/pages.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/features/cancel-contact.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/cancel-contact.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/src/features/create-contact.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/create-contact.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/features/delete-contact.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/delete-contact.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/features/edit-contact.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/edit-contact.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/src/features/home-page.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/home-page.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/features/playground/iframes.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/playground/iframes.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/alerts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/alerts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/step-definitions/stored.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/step-definitions/stored.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/features/search-contact.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/search-contact.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/features/validate-contact.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/validate-contact.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -320,7 +320,7 @@
       <workItem from="1711697776136" duration="12391000" />
       <workItem from="1714819591408" duration="13442000" />
       <workItem from="1714895962286" duration="2137000" />
-      <workItem from="1714901301435" duration="48755000" />
+      <workItem from="1714901301435" duration="49625000" />
     </task>
     <task id="LOCAL-00001" summary="section 4.23">
       <option name="closed" value="true" />
@@ -602,7 +602,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715421369733</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="section 19.157 - additional end to end scenarios">
+      <option name="closed" value="true" />
+      <created>1715478565084</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1715478565084</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -643,7 +651,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="section 7.52 debugging capabilities" />
     <MESSAGE value="section 8.57 radio steps and negation" />
     <MESSAGE value="section 8.62 autocompletes, parallel execution, retries" />
     <MESSAGE value="section 9.66 checkboxes, auto step logging" />
@@ -668,7 +675,8 @@
     <MESSAGE value="section 17.141 - improve automation failure errors part 1" />
     <MESSAGE value="section 18.151 - improve automation failure errors part 2" />
     <MESSAGE value="section 19.153 - random test data" />
-    <option name="LAST_COMMIT_MESSAGE" value="section 19.153 - random test data" />
+    <MESSAGE value="section 19.157 - additional end to end scenarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="section 19.157 - additional end to end scenarios" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
