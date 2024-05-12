@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 19.157 - additional end to end scenarios">
+    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 20.162 - mocking setup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/config/hosts.json" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/config/hosts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/config/mappings/playground.json" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/config/mappings/playground.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e2e/env/common.env" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/env/common.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/env/global.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/env/global.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/features/playground/mock.feature" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/features/playground/mock.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,7 +315,7 @@
       <workItem from="1711697776136" duration="12391000" />
       <workItem from="1714819591408" duration="13442000" />
       <workItem from="1714895962286" duration="2137000" />
-      <workItem from="1714901301435" duration="52666000" />
+      <workItem from="1714901301435" duration="54497000" />
     </task>
     <task id="LOCAL-00001" summary="section 4.23">
       <option name="closed" value="true" />
@@ -616,7 +613,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715479518668</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="section 20.162 - mocking setup">
+      <option name="closed" value="true" />
+      <created>1715484312732</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1715484312732</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -657,7 +662,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="section 8.57 radio steps and negation" />
     <MESSAGE value="section 8.62 autocompletes, parallel execution, retries" />
     <MESSAGE value="section 9.66 checkboxes, auto step logging" />
     <MESSAGE value="section 9.74 iframes, tabs, windows" />
@@ -682,7 +686,8 @@
     <MESSAGE value="section 18.151 - improve automation failure errors part 2" />
     <MESSAGE value="section 19.153 - random test data" />
     <MESSAGE value="section 19.157 - additional end to end scenarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="section 19.157 - additional end to end scenarios" />
+    <MESSAGE value="section 20.162 - mocking setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="section 20.162 - mocking setup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -698,6 +703,12 @@
           <line>12</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-visibility.ts</url>
+          <line>18</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
