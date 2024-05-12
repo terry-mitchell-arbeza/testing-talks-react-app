@@ -12,7 +12,10 @@
   "street": "[data-id='street']",
   "city": "[data-id='city']",
   "save": "[data-id='save-button']",
+  "cancel": "[data-id='cancel-button']",
   "playground": "[data-id='playground-button']",
   "contact": "[data-id='contact']",
-  "full name label": "[data-id='full-name-label']"
+  "full name label": "[data-id='full-name-label']",
+  "no items message": "[data-id='no-items-message']",
+  "error message": "[data-id='error-message']"
 }

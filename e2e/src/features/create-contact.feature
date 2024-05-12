@@ -29,7 +29,6 @@ Feature: As a user I expect to be able to create contacts
     And the "edit" should be displayed
     And the "delete" should be displayed
 
-  @smoke
   @regression
   Scenario: As a user I do not expect saved contacts to persist after a page refresh
     Given I click the "create" button
@@ -55,4 +54,8 @@ Feature: As a user I expect to be able to create contacts
     And I refresh the "home" page
     And I fill in the "search" input with "Tanya Hardie"
     Then the "contact" should not be displayed
+
+
+  Scenario: As a user I can create and verify multiple new contacts
+
 

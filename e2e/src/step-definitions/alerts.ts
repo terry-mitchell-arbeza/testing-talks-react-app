@@ -10,12 +10,11 @@ When(
 
         switch(dialogAction) {
             case 'accept':
-                page.on('dialog', dialog => dialog.accept());
+                page.on('dialog', async dialog => await dialog.accept());
                 break;
             case 'dismiss':
-                page.on('dialog', dialog => dialog.accept());
+                page.on('dialog', async dialog => await dialog.dismiss());
                 break;
         }
-
     }
 )

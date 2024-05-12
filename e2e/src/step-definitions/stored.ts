@@ -3,6 +3,7 @@ import {ScenarioWorld} from "./setup/world";
 import {ElementKey} from "../env/global";
 import {getElementLocator} from "../support/web-element-helper";
 import {waitFor, waitForResult, waitForSelector} from "../support/wait-for-behaviour";
+import {getElementText} from "../support/html-behaviour";
 
 Then(
     /^I retrieve the "([^"]*)" text and store it as "([^"]*)" in global variables$/,
@@ -18,7 +19,7 @@ Then(
         await waitFor(async () => {
                 const elementStable = await waitForSelector(page, elementIdentifier);
                 if (elementStable){
-                    const elementText = await page.textContent(elementIdentifier);
+                    const elementText = await getElementText(page, elementIdentifier);
                     if(elementText != null) {
                         globalVariables[variableKey] = elementText;
                         return waitForResult.PASS;
