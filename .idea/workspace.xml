@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 20.164 - scenarios using mocking">
+    <list default="true" id="bce1d527-c564-4480-ae27-6d22624bd655" name="Default Changelist" comment="section 21.169 - accessibility steps and accessibility fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/env/common.env" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/env/common.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BasicCheckBox.react.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BasicCheckBox.react.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BasicIframe.react.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BasicIframe.react.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BasicIndex.react.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BasicIndex.react.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BasicLogin.react.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BasicLogin.react.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,37 +102,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber.js.Scenario: As a user I can interact an....executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Shell Script.cucumber:dev.executor": "Run",
-    "Shell Script.cucumber:regression.executor": "Run",
-    "Shell Script.cucumber:smoke.executor": "Run",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/src/step-definitions/assertions",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.cucumber.cucumber_node_package_dir": "/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/node_modules/@cucumber/cucumber",
-    "nodejs_package_manager_path": "yarn",
-    "npm.cucumber.executor": "Run",
-    "npm.cucumber:dev.executor": "Run",
-    "npm.cucumber:regression.executor": "Run",
-    "npm.cucumber:smoke.executor": "Run",
-    "npm.cuke:localhost:dev.executor": "Run",
-    "npm.cuke:localhost:regression.executor": "Run",
-    "npm.cuke:production:dev.executor": "Run",
-    "npm.cuke:production:regression.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber.js.Scenario: As a user I can interact an....executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Shell Script.cucumber:dev.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.cucumber:regression.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.cucumber:smoke.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/src/step-definitions/assertions&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.cucumber.cucumber_node_package_dir&quot;: &quot;/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/node_modules/@cucumber/cucumber&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;npm.cucumber.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cucumber:dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cucumber:regression.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cucumber:smoke.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cuke:localhost:dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cuke:localhost:regression.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cuke:production:dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.cuke:production:regression.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/terrymitchell/dev/testing-talks-hub/react-app/e2e/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/e2e/src/step-definitions/assertions" />
@@ -157,7 +148,7 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.cuke:localhost:dev">
+  <component name="RunManager" selected="npm.cuke:production:regression">
     <configuration name="cucumber:dev" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -322,7 +313,8 @@
       <workItem from="1711697776136" duration="12391000" />
       <workItem from="1714819591408" duration="13442000" />
       <workItem from="1714895962286" duration="2137000" />
-      <workItem from="1714901301435" duration="59363000" />
+      <workItem from="1714901301435" duration="62557000" />
+      <workItem from="1721475651972" duration="2308000" />
     </task>
     <task id="LOCAL-00001" summary="section 4.23">
       <option name="closed" value="true" />
@@ -636,7 +628,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715486050168</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="section 21.169 - accessibility steps and accessibility fixes">
+      <option name="closed" value="true" />
+      <created>1715493165541</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1715493165541</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -677,7 +677,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="section 9.66 checkboxes, auto step logging" />
     <MESSAGE value="section 9.74 iframes, tabs, windows" />
     <MESSAGE value=" section 10.79 - click and verify at index" />
     <MESSAGE value=" section 10.83 - tables" />
@@ -702,7 +701,8 @@
     <MESSAGE value="section 19.157 - additional end to end scenarios" />
     <MESSAGE value="section 20.162 - mocking setup" />
     <MESSAGE value="section 20.164 - scenarios using mocking" />
-    <option name="LAST_COMMIT_MESSAGE" value="section 20.164 - scenarios using mocking" />
+    <MESSAGE value="section 21.169 - accessibility steps and accessibility fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="section 21.169 - accessibility steps and accessibility fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -710,19 +710,16 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/e2e/src/support/wait-for-behaviour.ts</url>
           <line>66</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/e2e/src/step-definitions/click.ts</url>
           <line>12</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/e2e/src/step-definitions/assertions/verify-element-visibility.ts</url>
           <line>18</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
